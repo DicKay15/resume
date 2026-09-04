@@ -46,7 +46,7 @@ docs/
 Requires Node.js 22 or newer.
 
 ```bash
-npm install
+npm install --omit=optional --ignore-scripts --no-audit --no-fund
 npx playwright install chromium
 npm run check
 ```
