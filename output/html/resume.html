@@ -5,18 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Resume for Dhrumil Kherde, Product Designer">
   <title>Dhrumil Kherde - Product Designer Resume</title>
-  <style>@page {
+  <style>@font-face {
+  font-family: "Resume Sans";
+  src: url("../../node_modules/@fontsource/ibm-plex-sans/files/ibm-plex-sans-latin-300-normal.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Resume Sans";
+  src: url("../../node_modules/@fontsource/ibm-plex-sans/files/ibm-plex-sans-latin-400-normal.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Resume Sans";
+  src: url("../../node_modules/@fontsource/ibm-plex-sans/files/ibm-plex-sans-latin-600-normal.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Resume Mono";
+  src: url("../../node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-400-normal.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Resume Mono";
+  src: url("../../node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-600-normal.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: block;
+}
+
+@page {
   size: A4;
-  margin: 12mm 14mm;
+  margin: 16mm 17mm 19mm;
 }
 
 :root {
   color-scheme: light;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 10pt;
-  line-height: 1.38;
-  color: #202326;
-  background: #fdfdfb;
+  font-family: "Resume Sans", Arial, sans-serif;
+  font-size: 9.7pt;
+  line-height: 1.34;
+  color: #202733;
+  background: #fbfbfa;
 }
 
 * {
@@ -27,11 +67,11 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: #fdfdfb;
+  background: #fbfbfa;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Resume Sans", Arial, sans-serif;
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
 }
@@ -49,104 +89,153 @@ h3 {
 }
 
 p {
-  margin-bottom: 2.2mm;
+  margin-bottom: 2mm;
 }
 
 a {
   color: inherit;
-  text-decoration: underline;
-  text-decoration-thickness: 0.45pt;
-  text-underline-offset: 1.2pt;
+  text-decoration: none;
 }
 
 .resume-header {
-  border-bottom: 0.7pt solid #303438;
-  padding-bottom: 3.4mm;
-  margin-bottom: 4.6mm;
-  text-align: center;
+  margin-bottom: 4.2mm;
+  text-align: left;
 }
 
 h1 {
-  margin-bottom: 0.7mm;
-  font-size: 22pt;
-  line-height: 1.05;
-  letter-spacing: -0.35pt;
-  color: #17191b;
+  margin-bottom: 0.8mm;
+  color: #202733;
+  font-size: 26pt;
+  font-weight: 300;
+  letter-spacing: -0.7pt;
+  line-height: 1.04;
 }
 
-.headline {
-  margin-bottom: 2.1mm;
-  font-size: 12pt;
-  line-height: 1.15;
-  font-weight: 700;
+.availability {
+  margin-bottom: 6.1mm;
+  color: #7b8594;
+  font-size: 9.2pt;
+  line-height: 1.2;
+}
+
+.availability span {
+  padding: 0 0.7mm;
+  color: #a1a8b1;
 }
 
 .contact {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: center;
-  gap: 0 2mm;
+  gap: 0 1.35mm;
   margin-bottom: 0;
-  font-size: 7.7pt;
-  line-height: 1.24;
+  padding-bottom: 1.6mm;
+  border-bottom: 0.5pt solid #d2d8de;
+  color: #7b8594;
+  font-size: 8.4pt;
+  line-height: 1.2;
   white-space: nowrap;
 }
 
 .contact span:not(:last-child)::after {
   content: " |";
-  margin-left: 2mm;
-  color: #6a6f73;
+  margin-left: 1.35mm;
+  color: #a1a8b1;
 }
 
-section {
-  margin-bottom: 4.2mm;
+.profile {
+  margin-bottom: 7.2mm;
 }
 
-h2 {
-  margin-bottom: 2mm;
-  padding-bottom: 0.8mm;
-  border-bottom: 0.55pt solid #9aa0a5;
-  font-size: 10.2pt;
-  line-height: 1.1;
-  font-weight: 700;
-  letter-spacing: 0.55pt;
+.profile-title {
+  margin-bottom: 1.5mm;
+  color: #202733;
+  font-size: 12.1pt;
+  font-weight: 600;
+  letter-spacing: -0.15pt;
+  line-height: 1.15;
+}
+
+.profile p {
+  max-width: 165mm;
+  margin-bottom: 0;
+  font-size: 10pt;
+  line-height: 1.38;
+}
+
+section:not(.profile) {
+  margin-bottom: 6.2mm;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 4mm;
+  margin-bottom: 5.2mm;
+  color: #7b8594;
+  font-size: 8.1pt;
+  font-weight: 600;
+  letter-spacing: 0.05pt;
+  line-height: 1;
   text-transform: uppercase;
-  color: #303438;
 }
 
-.continued-heading {
-  margin-top: 0;
+.section-heading::after {
+  content: "";
+  flex: 1;
+  height: 0.5pt;
+  background: #d2d8de;
 }
 
 h3 {
-  margin-bottom: 0.45mm;
-  font-size: 10.15pt;
-  line-height: 1.16;
-  font-weight: 700;
-  color: #25282b;
-}
-
-.location {
-  font-weight: 400;
-}
-
-.skill-line {
-  margin-bottom: 1.2mm;
-  line-height: 1.3;
+  margin-bottom: 0;
+  color: #202733;
+  font-size: 10.2pt;
+  font-weight: 600;
+  letter-spacing: -0.08pt;
+  line-height: 1.2;
 }
 
 .role {
-  margin-bottom: 4mm;
+  margin-bottom: 5mm;
   break-inside: avoid;
 }
 
-.role-heading {
-  margin-bottom: 1.1mm;
+.role:last-child {
+  margin-bottom: 0;
 }
 
-.role-meta {
+.role-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4mm;
+  margin-bottom: 1.2mm;
+}
+
+.role-heading h3 {
+  min-width: 0;
+}
+
+.location,
+.entry-detail {
+  margin-left: 2mm;
+  color: #7b8594;
+  font-weight: 400;
+}
+
+.role-dates,
+.entry-date {
+  flex: 0 0 auto;
   margin-bottom: 0;
-  font-size: 9.2pt;
+  color: #7b8594;
+  font-family: "Resume Mono", monospace;
+  font-size: 8.1pt;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.role-description {
+  margin-bottom: 1.6mm;
 }
 
 ul {
@@ -155,24 +244,111 @@ ul {
 }
 
 li {
-  margin-bottom: 1mm;
-  padding-left: 0.4mm;
+  margin-bottom: 1.15mm;
+  padding-left: 1.1mm;
+  line-height: 1.35;
+}
+
+li::marker {
+  color: #8b95a2;
+  font-size: 0.7em;
 }
 
 li:last-child {
   margin-bottom: 0;
 }
 
+strong {
+  font-weight: 600;
+}
+
+.proof {
+  color: #007184;
+  font-family: "Resume Mono", monospace;
+  font-size: 0.92em;
+  font-weight: 600;
+  letter-spacing: -0.1pt;
+}
+
 .page-break {
   break-before: page;
+}
+
+.continued-heading {
+  margin-top: 0;
 }
 
 .compact-entry {
   break-inside: avoid;
 }
 
+.entry-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 5mm;
+}
+
+.entry-row p,
 .compact-entry p {
   margin-bottom: 0;
+}
+
+.education-detail {
+  margin-top: 1mm;
+  color: #7b8594;
+}
+
+.education-detail span {
+  padding: 0 0.8mm;
+  color: #a1a8b1;
+}
+
+.credentials {
+  display: flex;
+  gap: 8mm;
+}
+
+.credentials p {
+  margin-bottom: 0;
+}
+
+.credentials span {
+  margin-left: 1.2mm;
+  color: #7b8594;
+}
+
+.achievement > p {
+  margin-top: 1mm;
+}
+
+.skills {
+  margin-bottom: 0;
+}
+
+.skill-row {
+  display: grid;
+  grid-template-columns: 40mm 1fr;
+  gap: 0 3mm;
+  margin-bottom: 1.4mm;
+}
+
+.skill-row:last-child {
+  margin-bottom: 0;
+}
+
+.skill-row h3 {
+  color: #7b8594;
+  font-size: 8.1pt;
+  font-weight: 600;
+  letter-spacing: 0.02pt;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.skill-row p {
+  margin-bottom: 0;
+  line-height: 1.35;
 }
 
 .last-section {
@@ -183,14 +359,7 @@ li:last-child {
   body {
     max-width: 210mm;
     margin: 12mm auto;
-    padding: 12mm 14mm;
-    border: 1px solid #d8d9d6;
-  }
-}
-
-@media print {
-  a {
-    text-decoration: none;
+    padding: 16mm 17mm 19mm;
   }
 }
 </style>
@@ -199,9 +368,8 @@ li:last-child {
   <main>
     <header class="resume-header">
       <h1>Dhrumil Kherde</h1>
-      <p class="headline">Product Designer</p>
+      <p class="availability">India <span>|</span> Remote</p>
       <p class="contact">
-        <span>Vadodara, India - Remote</span>
         <span><a href="tel:+918320565071">+91 83205 65071</a></span>
         <span><a href="mailto:dhrumil.kherde@gmail.com">dhrumil.kherde@gmail.com</a></span>
         <span><a href="https://www.linkedin.com/in/dhrumil-dk/">linkedin.com/in/dhrumil-dk</a></span>
@@ -209,65 +377,43 @@ li:last-child {
       </p>
     </header>
 
-    <section aria-labelledby="summary-heading">
-      <h2 id="summary-heading">Professional summary</h2>
-      <p><strong>Product Designer</strong> with <strong>5+ years of experience</strong> shipping <strong>0-to-1 AI and SaaS products</strong> across healthcare, enterprise, and consumer markets. I work from <strong>UX research and product strategy</strong> through information architecture, UI design, design systems, prototyping, developer handoff, and front-end implementation. Comfortable collaborating with founders, product managers, and engineers from concept to launch.</p>
-    </section>
-
-    <section aria-labelledby="skills-heading" class="skills">
-      <h2 id="skills-heading">Skills</h2>
-
-  <p class="skill-line">
-    <strong>Design:</strong>
-    <strong>Product Design</strong>, <strong>Product Strategy</strong>, <strong>UX Research</strong>, User Research, <strong>User Experience (UX) Design</strong>, <strong>User Interface (UI) Design</strong>, Usability Testing, A/B Testing, Information Architecture, User Flows, Wireframing, Prototyping, Interaction Design, Visual Design, Responsive Design, <strong>Design Systems</strong>, <strong>Accessibility (WCAG)</strong>, Data Visualization, Design Documentation, Developer Handoff, Stakeholder Management, Cross-functional Collaboration
-  </p>
-
-  <p class="skill-line">
-    <strong>Product contexts:</strong>
-    AI Products, SaaS, B2B, Enterprise Software, Healthcare Technology, Mobile App Design, Web App Design, Analytics Dashboards
-  </p>
-
-  <p class="skill-line">
-    <strong>Design tools:</strong>
-    Figma, Framer, Webflow, Miro, Balsamiq, Notion, Lottie
-  </p>
-
-  <p class="skill-line">
-    <strong>AI and build tools:</strong>
-    React, TypeScript, HTML/CSS, Tailwind CSS, Cloudflare Workers, Claude Code, Codex, Figma MCP, Figma Make, No-code Development
-  </p>
+    <section aria-labelledby="summary-heading" class="profile">
+      <h2 id="summary-heading" class="profile-title">Product Designer</h2>
+      <p>I design and ship 0-to-1 AI and SaaS products across healthcare, enterprise, and consumer markets. I work from UX research and product strategy through information architecture, UI design, design systems, prototyping, developer handoff, and front-end implementation. I am strongest at turning complex workflows into clear, production-ready experiences with founders, product managers, and engineers.</p>
     </section>
 
     <section aria-labelledby="experience-heading" class="experience">
-      <h2 id="experience-heading">Work experience</h2>
+      <h2 id="experience-heading" class="section-heading">Experience</h2>
 
 
   <article class="role">
     <div class="role-heading">
-      <h3>CodeBuddy <span class="location">| Pune</span></h3>
-      <p class="role-meta"><strong>Product Designer</strong> | Feb 2025 - May 2026</p>
+      <h3>CodeBuddy, Product Designer <span class="location">Pune</span></h3>
+      <p class="role-dates">Feb 2025 to May 2026</p>
     </div>
+
     <ul>
-      <li>Led product design across <strong>seven client products</strong> in healthcare, security, creator economy, and enterprise SaaS, owning UX research, user flows, responsive design, design systems, prototyping, and Figma developer handoff while working directly with founders, product managers, and engineers.</li>
-<li>Led end-to-end design for <strong>N1.care</strong>, an AI clinical intelligence platform supporting patient management, biomarkers, genetics, diagnostics, and clinical workflows. Shaped <strong>10 modules</strong> from concept to production with a 23-person team and built an <strong>80+ component design system</strong> with 64 icons and 86 documented colors.</li>
+      <li>Led product design across <strong class="proof">seven client products</strong> in healthcare, security, creator economy, and enterprise SaaS, owning UX research, user flows, responsive design, design systems, prototyping, and Figma developer handoff while working directly with founders, product managers, and engineers.</li>
+<li>Led end-to-end design for <strong>N1.care</strong>, an AI clinical intelligence platform supporting patient management, biomarkers, genetics, diagnostics, and clinical workflows. Shaped <strong class="proof">10 modules</strong> from concept to production with a 23-person team and built an <strong class="proof">80+ component design system</strong> with 64 icons and 86 documented colors.</li>
 <li>Created <strong>WCAG-compliant accessible components</strong> and a <strong>data visualization library</strong> for clinician, patient, and administrator personas.</li>
-<li>Built <strong>45 biomarker chart prototypes</strong> in HTML/CSS/SVG and ApexCharts and wrote <strong>26 product documentation files</strong> covering 92 platform features and 185 documented items.</li>
+<li>Built <strong class="proof">45 biomarker chart prototypes</strong> in HTML/CSS/SVG and ApexCharts and wrote <strong class="proof">26 product documentation files</strong> covering 92 platform features and 185 documented items.</li>
 <li>Co-led product design for <strong>Riskabilitie</strong>, an enterprise risk management SaaS, facilitating stakeholder workshops and translating research into multi-level workflows, analytics dashboards, reporting, and product decisions.</li>
 <li>Owned <strong>product design and front-end engineering</strong> for <strong>Proposal Buddy</strong>, an AI proposal management platform with proposal generation, CRM workflows, analytics, approvals, pitch deck creation, and document sharing. Used Claude Code and Codex to accelerate prototyping, design system management, and deployment.</li>
-<li>Designed and developed <strong>7+ production Framer websites</strong> for startups and client businesses.</li>
+<li>Designed and developed <strong class="proof">7+ production Framer websites</strong> for startups and client businesses.</li>
     </ul>
   </article>
 
-  <div class="page-break"></div><h2 class="continued-heading">Work experience, continued</h2>
+
   <article class="role">
     <div class="role-heading">
-      <h3>Duggup <span class="location">| Bangalore (Remote)</span></h3>
-      <p class="role-meta"><strong>Founding Product Designer</strong> | Feb 2023 - Jan 2025</p>
+      <h3>Duggup, Founding Product Designer <span class="location">Bangalore (Remote)</span></h3>
+      <p class="role-dates">Feb 2023 to Jan 2025</p>
     </div>
+
     <ul>
       <li>Led end-to-end product design for the Duggup web and mobile applications as the <strong>sole designer</strong>, working with the product owner and a cross-functional development team from inception to launch.</li>
-<li>Shipped version 1.0 in <strong>five months</strong> and reached <strong>2,000+ users in the first week</strong>.</li>
-<li>Built a cross-platform design system that <strong>reduced testing and redesign time by 50%</strong> across web and mobile.</li>
+<li>Shipped version 1.0 in <strong class="proof">five months</strong> and reached <strong class="proof">2,000+ users in the first week</strong>.</li>
+<li>Built a cross-platform design system that <strong class="proof">reduced testing and redesign time by 50%</strong> across web and mobile.</li>
 <li>Shipped new features every two weeks and ran A/B tests with developers to improve key user flows.</li>
     </ul>
   </article>
@@ -275,67 +421,102 @@ li:last-child {
 
   <article class="role">
     <div class="role-heading">
-      <h3>Consult Anubhav <span class="location">| Vadodara</span></h3>
-      <p class="role-meta"><strong>UX Designer</strong> | Jun 2022 - Jun 2023</p>
+      <h3>Consult Anubhav, UX Designer <span class="location">Vadodara</span></h3>
+      <p class="role-dates">Jun 2022 to Jun 2023</p>
     </div>
+
     <ul>
-      <li>Led end-to-end UX and UI design for <strong>Draftsy</strong>, a fantasy sports application for BREN LLC, <strong>increasing engagement by 20%</strong> through UX iterations and A/B-tested design changes.</li>
+      <li>Led end-to-end UX and UI design for <strong>Draftsy</strong>, a fantasy sports application for BREN LLC, <strong class="proof">increasing engagement by 20%</strong> through UX iterations and A/B-tested design changes.</li>
 <li>Conducted product research, field studies, and usability testing to refine user experience and product features.</li>
-<li>Led a <strong>team of three designers</strong> across a food delivery service, a logistics and shipment platform, and an internal enterprise survey tool, owning research, design, and handoff.</li>
+<li>Led a <strong class="proof">team of three designers</strong> across a food delivery service, a logistics and shipment platform, and an internal enterprise survey tool, owning research, design, and handoff.</li>
+    </ul>
+  </article>
+
+  <div class="page-break"></div><h2 class="section-heading continued-heading">Experience, continued</h2>
+  <article class="role">
+    <div class="role-heading">
+      <h3>Healthplix Technologies, UX Design Intern <span class="location">Bangalore (Remote)</span></h3>
+      <p class="role-dates">Apr 2022 to Jun 2022</p>
+    </div>
+
+    <ul>
+      <li>Expanded the Healthplix design system with <strong class="proof">26 components and variants</strong>, achieving <strong class="proof">100% UI consistency</strong> and reducing design-to-development handoff time by approximately 20%.</li>
+<li>Designed admin panels and on-site marketing campaign interfaces for internal teams, <strong class="proof">reducing campaign launch turnaround time by 33%</strong>.</li>
     </ul>
   </article>
 
 
   <article class="role">
     <div class="role-heading">
-      <h3>Healthplix Technologies <span class="location">| Bangalore (Remote)</span></h3>
-      <p class="role-meta"><strong>UX Design Intern</strong> | Apr 2022 - Jun 2022</p>
+      <h3>Freelance, Freelance Product and UX Designer <span class="location">Vadodara (Remote)</span></h3>
+      <p class="role-dates">Mar 2021 to May 2022</p>
     </div>
-    <ul>
-      <li>Expanded the Healthplix design system with <strong>26 components and variants</strong>, achieving <strong>100% UI consistency</strong> and reducing design-to-development handoff time by approximately 20%.</li>
-<li>Designed admin panels and on-site marketing campaign interfaces for internal teams, <strong>reducing campaign launch turnaround time by 33%</strong>.</li>
-    </ul>
-  </article>
 
-
-  <article class="role">
-    <div class="role-heading">
-      <h3>Freelance <span class="location">| Vadodara (Remote)</span></h3>
-      <p class="role-meta"><strong>Freelance Product and UX Designer</strong> | Mar 2021 - May 2022</p>
-    </div>
     <ul>
-      <li>Redesigned Baroda Public School&#039;s Learning Management System, <strong>increasing student interaction by 35%</strong> and <strong>course completion rates by 20%</strong>.</li>
-<li>Led brand identity design for a client, driving <strong>350% audience growth within two months</strong>.</li>
+      <li>Redesigned Baroda Public School&#039;s Learning Management System, <strong class="proof">increasing student interaction by 35%</strong> and <strong class="proof">course completion rates by 20%</strong>.</li>
+<li>Led brand identity design for a client, driving <strong class="proof">350% audience growth within two months</strong>.</li>
 <li>Delivered user flows, usability improvements, logos, marketing posters, carousels, and campaign assets across diverse client projects.</li>
     </ul>
   </article>
     </section>
 
     <section aria-labelledby="education-heading">
-      <h2 id="education-heading">Education</h2>
+      <h2 id="education-heading" class="section-heading">Education</h2>
 
-        <article class="compact-entry">
-          <h3>Bachelor of Engineering, Mechanical Engineering</h3>
-          <p>SVIT (Gujarat Technological University) | Vasad, Gujarat | May 2022</p>
+        <article class="compact-entry education-entry">
+          <div class="entry-row">
+            <h3>SVIT (Gujarat Technological University)</h3>
+            <p class="entry-date">May 2022</p>
+          </div>
+          <p class="education-detail">Bachelor of Engineering, Mechanical Engineering <span>|</span> Vasad, Gujarat</p>
         </article>
     </section>
 
     <section aria-labelledby="certifications-heading">
-      <h2 id="certifications-heading">Certifications</h2>
-      <p>UX Design Foundations, Uxcel | Color Psychology, Uxcel</p>
+      <h2 id="certifications-heading" class="section-heading">Certifications</h2>
+      <div class="credentials">
+        <p><strong>UX Design Foundations</strong> <span>Uxcel</span></p>
+<p><strong>Color Psychology</strong> <span>Uxcel</span></p>
+      </div>
     </section>
 
     <section aria-labelledby="achievement-heading">
-      <h2 id="achievement-heading">Awards and achievements</h2>
-      <article class="compact-entry">
-        <h3>Top 50 Rising Designers | Upraised, Embark | Oct 2021</h3>
+      <h2 id="achievement-heading" class="section-heading">Awards and achievements</h2>
+      <article class="compact-entry achievement">
+        <div class="entry-row">
+          <h3>Top 50 Rising Designers <span class="entry-detail">Upraised, Embark</span></h3>
+          <p class="entry-date">Oct 2021</p>
+        </div>
         <p>Ranked in the top 50 rising designers among 455,534 students from more than 20,000 colleges in Embark 2021.</p>
       </article>
     </section>
 
-    <section aria-labelledby="languages-heading" class="last-section">
-      <h2 id="languages-heading">Languages</h2>
-      <p>English, Hindi, Gujarati, Marathi</p>
+    <section aria-labelledby="skills-heading" class="skills last-section">
+      <h2 id="skills-heading" class="section-heading">Skills</h2>
+
+  <div class="skill-row">
+    <h3>Design</h3>
+    <p>Product Design, Product Strategy, UX Research, User Research, User Experience (UX) Design, User Interface (UI) Design, Usability Testing, A/B Testing, Information Architecture, User Flows, Wireframing, Prototyping, Interaction Design, Visual Design, Responsive Design, Design Systems, Accessibility (WCAG), Data Visualization, Design Documentation, Developer Handoff, Stakeholder Management, Cross-functional Collaboration</p>
+  </div>
+
+  <div class="skill-row">
+    <h3>Product contexts</h3>
+    <p>AI Products, SaaS, B2B, Enterprise Software, Healthcare Technology, Mobile App Design, Web App Design, Analytics Dashboards</p>
+  </div>
+
+  <div class="skill-row">
+    <h3>Design tools</h3>
+    <p>Figma, Framer, Webflow, Miro, Balsamiq, Notion, Lottie</p>
+  </div>
+
+  <div class="skill-row">
+    <h3>AI and build tools</h3>
+    <p>React, TypeScript, HTML/CSS, Tailwind CSS, Cloudflare Workers, Claude Code, Codex, Figma MCP, Figma Make, No-code Development</p>
+  </div>
+      <div class="skill-row">
+        <h3>Languages</h3>
+        <p>English, Hindi, Gujarati, Marathi</p>
+      </div>
     </section>
   </main>
 </body>

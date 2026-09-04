@@ -85,6 +85,7 @@ const sourceStrings = [
     role.location,
     role.title,
     role.dates,
+    ...(role.description ? [role.description] : []),
     ...role.bullets,
   ]),
   ...data.education.flatMap((item) => [
@@ -107,12 +108,12 @@ if (missing.length) {
 }
 
 const requiredOrder = [
-  "Professional summary",
-  "Skills",
-  "Work experience",
+  data.person.title,
+  "Experience",
   "Education",
   "Certifications",
   "Awards and achievements",
+  "Skills",
   "Languages",
 ].map(normalize);
 

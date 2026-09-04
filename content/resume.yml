@@ -6,7 +6,7 @@ meta:
 person:
   name: Dhrumil Kherde
   title: Product Designer
-  location: Vadodara, India
+  location: India
   workPreference: Remote
   phoneDisplay: "+91 83205 65071"
   phoneUrl: "tel:+918320565071"
@@ -17,22 +17,22 @@ person:
   portfolioUrl: https://folio5.dhrumilkherde.com/
 
 summary: >-
-  **Product Designer** with **5+ years of experience** shipping **0-to-1 AI and
-  SaaS products** across healthcare, enterprise, and consumer markets. I work
-  from **UX research and product strategy** through information architecture,
-  UI design, design systems, prototyping, developer handoff, and front-end
-  implementation. Comfortable collaborating with founders, product managers,
-  and engineers from concept to launch.
+  I design and ship 0-to-1 AI and SaaS products across healthcare, enterprise,
+  and consumer markets. I work from UX research and product strategy through
+  information architecture, UI design, design systems, prototyping, developer
+  handoff, and front-end implementation. I am strongest at turning complex
+  workflows into clear, production-ready experiences with founders, product
+  managers, and engineers.
 
 skills:
   - label: Design
     items:
-      - "**Product Design**"
-      - "**Product Strategy**"
-      - "**UX Research**"
+      - Product Design
+      - Product Strategy
+      - UX Research
       - User Research
-      - "**User Experience (UX) Design**"
-      - "**User Interface (UI) Design**"
+      - User Experience (UX) Design
+      - User Interface (UI) Design
       - Usability Testing
       - A/B Testing
       - Information Architecture
@@ -42,8 +42,8 @@ skills:
       - Interaction Design
       - Visual Design
       - Responsive Design
-      - "**Design Systems**"
-      - "**Accessibility (WCAG)**"
+      - Design Systems
+      - Accessibility (WCAG)
       - Data Visualization
       - Design Documentation
       - Developer Handoff
@@ -85,51 +85,51 @@ experience:
   - company: CodeBuddy
     location: Pune
     title: Product Designer
-    dates: Feb 2025 - May 2026
+    dates: Feb 2025 to May 2026
     bullets:
-      - Led product design across **seven client products** in healthcare, security, creator economy, and enterprise SaaS, owning UX research, user flows, responsive design, design systems, prototyping, and Figma developer handoff while working directly with founders, product managers, and engineers.
-      - Led end-to-end design for **N1.care**, an AI clinical intelligence platform supporting patient management, biomarkers, genetics, diagnostics, and clinical workflows. Shaped **10 modules** from concept to production with a 23-person team and built an **80+ component design system** with 64 icons and 86 documented colors.
+      - Led product design across [[seven client products]] in healthcare, security, creator economy, and enterprise SaaS, owning UX research, user flows, responsive design, design systems, prototyping, and Figma developer handoff while working directly with founders, product managers, and engineers.
+      - Led end-to-end design for **N1.care**, an AI clinical intelligence platform supporting patient management, biomarkers, genetics, diagnostics, and clinical workflows. Shaped [[10 modules]] from concept to production with a 23-person team and built an [[80+ component design system]] with 64 icons and 86 documented colors.
       - Created **WCAG-compliant accessible components** and a **data visualization library** for clinician, patient, and administrator personas.
-      - Built **45 biomarker chart prototypes** in HTML/CSS/SVG and ApexCharts and wrote **26 product documentation files** covering 92 platform features and 185 documented items.
+      - Built [[45 biomarker chart prototypes]] in HTML/CSS/SVG and ApexCharts and wrote [[26 product documentation files]] covering 92 platform features and 185 documented items.
       - Co-led product design for **Riskabilitie**, an enterprise risk management SaaS, facilitating stakeholder workshops and translating research into multi-level workflows, analytics dashboards, reporting, and product decisions.
       - Owned **product design and front-end engineering** for **Proposal Buddy**, an AI proposal management platform with proposal generation, CRM workflows, analytics, approvals, pitch deck creation, and document sharing. Used Claude Code and Codex to accelerate prototyping, design system management, and deployment.
-      - Designed and developed **7+ production Framer websites** for startups and client businesses.
+      - Designed and developed [[7+ production Framer websites]] for startups and client businesses.
 
   - company: Duggup
     location: Bangalore (Remote)
     title: Founding Product Designer
-    dates: Feb 2023 - Jan 2025
-    pageBreakBefore: true
+    dates: Feb 2023 to Jan 2025
     bullets:
       - Led end-to-end product design for the Duggup web and mobile applications as the **sole designer**, working with the product owner and a cross-functional development team from inception to launch.
-      - Shipped version 1.0 in **five months** and reached **2,000+ users in the first week**.
-      - Built a cross-platform design system that **reduced testing and redesign time by 50%** across web and mobile.
+      - Shipped version 1.0 in [[five months]] and reached [[2,000+ users in the first week]].
+      - Built a cross-platform design system that [[reduced testing and redesign time by 50%]] across web and mobile.
       - Shipped new features every two weeks and ran A/B tests with developers to improve key user flows.
 
   - company: Consult Anubhav
     location: Vadodara
     title: UX Designer
-    dates: Jun 2022 - Jun 2023
+    dates: Jun 2022 to Jun 2023
     bullets:
-      - Led end-to-end UX and UI design for **Draftsy**, a fantasy sports application for BREN LLC, **increasing engagement by 20%** through UX iterations and A/B-tested design changes.
+      - Led end-to-end UX and UI design for **Draftsy**, a fantasy sports application for BREN LLC, [[increasing engagement by 20%]] through UX iterations and A/B-tested design changes.
       - Conducted product research, field studies, and usability testing to refine user experience and product features.
-      - Led a **team of three designers** across a food delivery service, a logistics and shipment platform, and an internal enterprise survey tool, owning research, design, and handoff.
+      - Led a [[team of three designers]] across a food delivery service, a logistics and shipment platform, and an internal enterprise survey tool, owning research, design, and handoff.
 
   - company: Healthplix Technologies
     location: Bangalore (Remote)
     title: UX Design Intern
-    dates: Apr 2022 - Jun 2022
+    dates: Apr 2022 to Jun 2022
+    pageBreakBefore: true
     bullets:
-      - Expanded the Healthplix design system with **26 components and variants**, achieving **100% UI consistency** and reducing design-to-development handoff time by approximately 20%.
-      - Designed admin panels and on-site marketing campaign interfaces for internal teams, **reducing campaign launch turnaround time by 33%**.
+      - Expanded the Healthplix design system with [[26 components and variants]], achieving [[100% UI consistency]] and reducing design-to-development handoff time by approximately 20%.
+      - Designed admin panels and on-site marketing campaign interfaces for internal teams, [[reducing campaign launch turnaround time by 33%]].
 
   - company: Freelance
     location: Vadodara (Remote)
     title: Freelance Product and UX Designer
-    dates: Mar 2021 - May 2022
+    dates: Mar 2021 to May 2022
     bullets:
-      - Redesigned Baroda Public School's Learning Management System, **increasing student interaction by 35%** and **course completion rates by 20%**.
-      - Led brand identity design for a client, driving **350% audience growth within two months**.
+      - Redesigned Baroda Public School's Learning Management System, [[increasing student interaction by 35%]] and [[course completion rates by 20%]].
+      - Led brand identity design for a client, driving [[350% audience growth within two months]].
       - Delivered user flows, usability improvements, logos, marketing posters, carousels, and campaign assets across diverse client projects.
 
 education:

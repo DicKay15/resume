@@ -22,7 +22,7 @@ Open that file on GitHub, click the pencil button, make the change, and commit i
 3. Check the section order, links, punctuation, and page count.
 4. Commit the regenerated files back to this repository.
 
-Wrap a short phrase in `**double asterisks**` when it should be bold for recruiter skimming. The generator keeps the text searchable and removes the asterisks from the PDF.
+Wrap a short phrase in `**double asterisks**` for strong recruiter emphasis. Wrap measurable proof in `[[double brackets]]` to use the teal monospaced evidence style. The generator keeps both searchable and removes the markers from the PDF.
 
 ## Project structure
 
@@ -61,6 +61,8 @@ On macOS, the generator automatically uses installed Google Chrome when availabl
 - Single-column reading order
 - Visible URLs and contact details
 - Searchable text with no images, icons, or decorative graphics
+- Left-aligned editorial hierarchy based on a proven broad-coverage resume reference
+- Teal monospaced emphasis reserved for measurable evidence
 - Restrained hierarchy designed for recruiters and parsing software
 - All active resume punctuation uses ASCII hyphens
 

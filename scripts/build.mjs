@@ -50,6 +50,9 @@ try {
     preferCSSPageSize: true,
     tagged: true,
     outline: true,
+    displayHeaderFooter: true,
+    headerTemplate: "<span></span>",
+    footerTemplate: `<div style="box-sizing:border-box;width:100%;padding:0 14mm 5mm;display:flex;align-items:center;justify-content:space-between;color:#7b8594;font-family:'Courier New',monospace;font-size:7pt;letter-spacing:.02em;"><span>${data.person.name}&nbsp;&nbsp;&nbsp;${data.person.title}</span><span class="pageNumber"></span></div>`,
   });
 } finally {
   await browser.close();

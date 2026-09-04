@@ -11,7 +11,7 @@ The original two-page PDF passed basic ATS extraction in two independent parsers
 | ATS text exposed only “LinkedIn” and “Portfolio” | Full LinkedIn and portfolio URLs are now visible text and clickable links |
 | Portfolio pointed to Folio 4 | Updated to the current Folio 5 portfolio |
 | Phone lacked an international prefix in visible text | Updated to `+91 83205 65071` |
-| Contact details wrapped across two lines | Consolidated into one aligned line with `Vadodara, India - Remote` and visible URLs |
+| Contact details wrapped across two lines | Consolidated into one aligned line beneath `India | Remote`, with visible URLs |
 | LinkedIn used HTTP | Updated to HTTPS |
 | “About” and “Achievement” were less standard section labels | Renamed to “Professional summary” and “Awards and achievements” |
 | Combined skills/tools/certifications heading | Split into standard Skills and Certifications sections |
@@ -27,11 +27,11 @@ The original two-page PDF passed basic ATS extraction in two independent parsers
 - Standard section names
 - Searchable text, no images or icons
 - No tables in the resume itself
-- System font with embedded PDF subsets and Unicode mappings
+- Embedded IBM Plex Sans and IBM Plex Mono subsets with Unicode mappings
 - Plain bullets and ASCII punctuation
 - Dates written consistently as month and year
 - Visible contact details and URLs
-- Two pages, with a deliberate page break before the previous roles
+- Two pages, balanced through natural role-safe pagination
 
 ## Automated validation
 
