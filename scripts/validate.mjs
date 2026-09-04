@@ -37,6 +37,10 @@ if (forbiddenDashes.test(yamlSource)) {
   throw new Error("Use ASCII hyphens in active resume content.");
 }
 
+if (yamlSource.includes("**")) {
+  throw new Error("Use only [[double brackets]] for inline resume emphasis.");
+}
+
 for (const visibleUrl of [data.person.linkedinDisplay, data.person.portfolioDisplay]) {
   if (!html.includes(visibleUrl)) {
     throw new Error(`Visible URL missing from HTML: ${visibleUrl}`);
@@ -59,6 +63,13 @@ for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber += 1) {
   ]);
   pageTexts.push(textContent.items.map((item) => item.str).join(" "));
   annotations.push(...pageAnnotations);
+
+  const viewport = page.getViewport({ scale: 1 });
+  if (Math.abs(viewport.width - 612) > 0.5 || Math.abs(viewport.height - 792) > 0.5) {
+    throw new Error(
+      `Expected US Letter pages (612 x 792 pt); page ${pageNumber} is ${viewport.width} x ${viewport.height}.`,
+    );
+  }
 }
 
 const pdfText = pageTexts.join(" ");
@@ -124,6 +135,28 @@ for (const heading of requiredOrder) {
   previousIndex = index;
 }
 
+let experienceCursor = normalizedPdf.indexOf(normalize("Experience"));
+for (const role of data.experience) {
+  const orderedRoleContent = [
+    `${role.company} ${role.title}`,
+    ...(role.description ? [role.description] : []),
+    ...role.bullets,
+  ];
+
+  for (const value of orderedRoleContent) {
+    const index = normalizedPdf.indexOf(normalize(value), experienceCursor + 1);
+    if (index === -1) {
+      throw new Error(`Experience reading order failed at: ${value}`);
+    }
+    experienceCursor = index;
+  }
+}
+
+const educationIndex = normalizedPdf.indexOf(normalize("Education"), experienceCursor + 1);
+if (educationIndex === -1) {
+  throw new Error("Education must follow the final experience bullet in PDF reading order.");
+}
+
 const annotationUrls = new Set(
   annotations
     .map((annotation) => annotation.url || annotation.unsafeUrl)
@@ -142,4 +175,4 @@ for (const url of [
 
 console.log(`Validated ${sourceStrings.length} source strings across ${pdf.numPages} pages.`);
 console.log(`Validated ${annotationUrls.size} PDF hyperlink annotations.`);
-console.log("Section order, visible URLs, ASCII punctuation, and page count passed.");
+console.log("Section and experience reading order, visible URLs, ASCII punctuation, Letter page size, and page count passed.");

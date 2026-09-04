@@ -34,25 +34,56 @@ const executablePath =
     ? await fs.access(macChrome).then(() => macChrome).catch(() => undefined)
     : undefined);
 
-const browser = await chromium.launch({
-  headless: true,
-  ...(executablePath ? { executablePath } : {}),
-});
+let browser;
+try {
+  browser = await chromium.launch({
+    headless: true,
+    ...(executablePath ? { executablePath } : {}),
+  });
+} catch (error) {
+  if (!executablePath) throw error;
+  console.warn("System Chrome did not launch; retrying with Playwright Chromium.");
+  browser = await chromium.launch({ headless: true });
+}
 
 try {
   const page = await browser.newPage();
   await page.goto(pathToFileURL(htmlPath).href, { waitUntil: "networkidle" });
   await page.emulateMedia({ media: "print" });
+
+  const client = await page.context().newCDPSession(page);
+  await Promise.all([client.send("DOM.enable"), client.send("CSS.enable")]);
+  const { root: documentRoot } = await client.send("DOM.getDocument");
+  const fontChecks = [
+    ["h1", "Helvetica Neue"],
+    [".profile p", "Helvetica Neue"],
+    [".role-dates", "Menlo"],
+    [".proof", "Menlo"],
+  ];
+  for (const [selector, expectedFamily] of fontChecks) {
+    const { nodeId } = await client.send("DOM.querySelector", {
+      nodeId: documentRoot.nodeId,
+      selector,
+    });
+    const { fonts } = await client.send("CSS.getPlatformFontsForNode", { nodeId });
+    const families = fonts.map((font) => font.familyName);
+    if (!families.includes(expectedFamily)) {
+      throw new Error(
+        `${selector} must render with ${expectedFamily}; found ${families.join(", ") || "no platform font"}.`,
+      );
+    }
+  }
+
   await page.pdf({
     path: pdfPath,
-    format: "A4",
+    format: "Letter",
     printBackground: true,
     preferCSSPageSize: true,
     tagged: true,
     outline: true,
     displayHeaderFooter: true,
     headerTemplate: "<span></span>",
-    footerTemplate: `<div style="box-sizing:border-box;width:100%;padding:0 14mm 5mm;display:flex;align-items:center;justify-content:space-between;color:#7b8594;font-family:'Courier New',monospace;font-size:7pt;letter-spacing:.02em;"><span>${data.person.name}&nbsp;&nbsp;&nbsp;${data.person.title}</span><span class="pageNumber"></span></div>`,
+    footerTemplate: `<div style="box-sizing:border-box;width:100%;padding:0 19.05mm 5.35mm;color:rgb(126,134,146)!important;-webkit-print-color-adjust:exact;font-family:Menlo,'Liberation Mono',monospace;font-size:7.6pt;"><span style="color:rgb(126,134,146)!important">${data.person.name}&nbsp;&nbsp;&nbsp;${data.person.title}&nbsp;&nbsp;&nbsp;</span><span class="pageNumber" style="color:rgb(126,134,146)!important"></span></div>`,
   });
 } finally {
   await browser.close();

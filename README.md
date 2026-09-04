@@ -22,7 +22,7 @@ Open that file on GitHub, click the pencil button, make the change, and commit i
 3. Check the section order, links, punctuation, and page count.
 4. Commit the regenerated files back to this repository.
 
-Wrap a short phrase in `**double asterisks**` for strong recruiter emphasis. Wrap measurable proof in `[[double brackets]]` to use the teal monospaced evidence style. The generator keeps both searchable and removes the markers from the PDF.
+Wrap measurable proof or an important keyword in `[[double brackets]]` to use the teal monospaced evidence style. The generator keeps the text searchable and removes the markers from the PDF. Use this single emphasis style consistently; do not add a second inline bold treatment.
 
 ## Project structure
 
@@ -32,7 +32,7 @@ content/
   original-pdf-extraction.md    Preserved extraction from the August 2026 PDF
 src/
   template.mjs                  Accessible HTML structure
-  resume.css                    A4 print design
+  resume.css                    US Letter print design
 scripts/
   build.mjs                     HTML and PDF generator
   validate.mjs                  ATS and source-completeness checks
@@ -61,7 +61,9 @@ On macOS, the generator automatically uses installed Google Chrome when availabl
 - Single-column reading order
 - Visible URLs and contact details
 - Searchable text with no images, icons, or decorative graphics
-- Left-aligned editorial hierarchy based on a proven broad-coverage resume reference
+- Measured US Letter geometry and 54pt side margins matching the broad-coverage reference
+- Helvetica Neue for content and Menlo for dates and evidence, verified during generation
+- Left-aligned editorial hierarchy based on the broad-coverage resume reference
 - Teal monospaced emphasis reserved for measurable evidence
 - Restrained hierarchy designed for recruiters and parsing software
 - All active resume punctuation uses ASCII hyphens

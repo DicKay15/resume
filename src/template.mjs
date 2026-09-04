@@ -8,8 +8,7 @@ const escapeHtml = (value) =>
 
 const renderInline = (value) =>
   escapeHtml(value)
-    .replace(/\[\[(.+?)\]\]/g, '<strong class="proof">$1</strong>')
-    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+    .replace(/\[\[(.+?)\]\]/g, '<strong class="proof">$1</strong>');
 
 const link = (label, url, className = "") =>
   `<a${className ? ` class="${className}"` : ""} href="${escapeHtml(url)}">${escapeHtml(label)}</a>`;
@@ -20,21 +19,27 @@ const renderSkillGroup = ({ label, items }) => `
     <p>${items.map(renderInline).join(", ")}</p>
   </div>`;
 
-const renderExperience = (role) => `
-  ${role.pageBreakBefore ? '<div class="page-break"></div><h2 class="section-heading continued-heading">Experience, continued</h2>' : ""}
-  <article class="role">
+const renderExperience = (role, isLast = false) => {
+  const roleLabel = `${role.company}, ${role.title} ${role.location}`;
+  const dateTabs = roleLabel.length < 45 ? "\t\t" : "\t";
+
+  return `
+  <article class="role${isLast ? " role-last" : ""}">
     <div class="role-heading">
-      <h3>${escapeHtml(role.company)}, ${escapeHtml(role.title)} <span class="location">${escapeHtml(role.location)}</span></h3>
-      <p class="role-dates">${escapeHtml(role.dates)}</p>
+      <h3>${escapeHtml(role.company)}, ${escapeHtml(role.title)} <span class="location">${escapeHtml(role.location)}</span>${dateTabs}<span class="role-dates">${escapeHtml(role.dates)}</span></h3>
     </div>
     ${role.description ? `<p class="role-description">${renderInline(role.description)}</p>` : ""}
     <ul>
       ${role.bullets.map((bullet) => `<li>${renderInline(bullet)}</li>`).join("\n")}
     </ul>
   </article>`;
+};
 
 export function renderResume(data, css) {
   const { person } = data;
+  const pageBreakIndex = data.experience.findIndex((role) => role.pageBreakBefore);
+  const firstPageRoles = pageBreakIndex === -1 ? data.experience : data.experience.slice(0, pageBreakIndex);
+  const continuedRoles = pageBreakIndex === -1 ? [] : data.experience.slice(pageBreakIndex);
 
   return `<!doctype html>
 <html lang="en">
@@ -63,12 +68,16 @@ export function renderResume(data, css) {
       <p>${renderInline(data.summary)}</p>
     </section>
 
-    <section aria-labelledby="experience-heading" class="experience">
+    <section aria-labelledby="experience-heading" class="experience-heading-block">
       <h2 id="experience-heading" class="section-heading">Experience</h2>
-      ${data.experience.map(renderExperience).join("\n")}
     </section>
+    ${firstPageRoles.map((role, index) => renderExperience(role, index === firstPageRoles.length - 1)).join("\n")}
 
-    <section aria-labelledby="education-heading">
+    ${continuedRoles.length ? `
+    <h2 id="experience-continued-heading" class="section-heading continued-heading">Experience, continued</h2>
+    ${continuedRoles.map((role, index) => renderExperience(role, index === continuedRoles.length - 1)).join("\n")}` : ""}
+
+    <section aria-labelledby="education-heading" class="education-section">
       <h2 id="education-heading" class="section-heading">Education</h2>
       ${data.education.map((item) => `
         <article class="compact-entry education-entry">

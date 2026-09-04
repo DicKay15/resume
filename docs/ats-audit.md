@@ -17,7 +17,7 @@ The original two-page PDF passed basic ATS extraction in two independent parsers
 | Combined skills/tools/certifications heading | Split into standard Skills and Certifications sections |
 | Generic terms such as “Research” | Added accurate exact-match terms such as UX Research, User Research, Product Strategy, Accessibility, Data Visualization, and Developer Handoff |
 | Grammar and consistency issues | Corrected engineer/engineers, on-site, two months, capitalization, number formatting, and section labels |
-| Page 2 was mostly empty | Rebalanced the content across two intentional A4 pages |
+| Page 2 was mostly empty | Rebalanced the content across two intentional US Letter pages |
 | Pages/Quartz PDF produced non-fatal cross-reference warnings | Replaced with a tagged Chromium PDF with Unicode text mappings |
 | Special dash characters | Active content uses ASCII hyphens only |
 
@@ -27,11 +27,12 @@ The original two-page PDF passed basic ATS extraction in two independent parsers
 - Standard section names
 - Searchable text, no images or icons
 - No tables in the resume itself
-- Embedded IBM Plex Sans and IBM Plex Mono subsets with Unicode mappings
+- Embedded Helvetica Neue and Menlo subsets with Unicode mappings
 - Plain bullets and ASCII punctuation
 - Dates written consistently as month and year
 - Visible contact details and URLs
 - Two pages, balanced through natural role-safe pagination
+- US Letter page size, validated at 612 x 792 points
 
 ## Automated validation
 

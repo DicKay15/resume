@@ -5,58 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Resume for Dhrumil Kherde, Product Designer">
   <title>Dhrumil Kherde - Product Designer Resume</title>
-  <style>@font-face {
-  font-family: "Resume Sans";
-  src: url("../../node_modules/@fontsource/ibm-plex-sans/files/ibm-plex-sans-latin-300-normal.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 300;
-  font-display: block;
-}
-
-@font-face {
-  font-family: "Resume Sans";
-  src: url("../../node_modules/@fontsource/ibm-plex-sans/files/ibm-plex-sans-latin-400-normal.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 400;
-  font-display: block;
-}
-
-@font-face {
-  font-family: "Resume Sans";
-  src: url("../../node_modules/@fontsource/ibm-plex-sans/files/ibm-plex-sans-latin-600-normal.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 600;
-  font-display: block;
-}
-
-@font-face {
-  font-family: "Resume Mono";
-  src: url("../../node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-400-normal.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 400;
-  font-display: block;
-}
-
-@font-face {
-  font-family: "Resume Mono";
-  src: url("../../node_modules/@fontsource/ibm-plex-mono/files/ibm-plex-mono-latin-600-normal.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 600;
-  font-display: block;
-}
-
-@page {
-  size: A4;
-  margin: 16mm 17mm 19mm;
+  <style>@page {
+  size: Letter;
+  margin: 16.27mm 19.05mm 18mm;
 }
 
 :root {
   color-scheme: light;
-  font-family: "Resume Sans", Arial, sans-serif;
-  font-size: 9.7pt;
-  line-height: 1.34;
-  color: #202733;
-  background: #fbfbfa;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 9.8pt;
+  line-height: 1.3265;
+  color: #1d252f;
+  background: transparent;
 }
 
 * {
@@ -67,11 +27,14 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: #fbfbfa;
+  background: transparent;
 }
 
 body {
-  font-family: "Resume Sans", Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-kerning: normal;
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0, "clig" 0;
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
 }
@@ -98,68 +61,69 @@ a {
 }
 
 .resume-header {
-  margin-bottom: 4.2mm;
+  margin-bottom: 3.5mm;
   text-align: left;
 }
 
 h1 {
-  margin-bottom: 0.8mm;
-  color: #202733;
-  font-size: 26pt;
+  margin-bottom: 1.33mm;
+  color: #1d252f;
+  font-size: 23pt;
   font-weight: 300;
-  letter-spacing: -0.7pt;
-  line-height: 1.04;
+  letter-spacing: -0.35pt;
+  line-height: 1.05;
 }
 
 .availability {
-  margin-bottom: 6.1mm;
-  color: #7b8594;
-  font-size: 9.2pt;
-  line-height: 1.2;
+  margin-bottom: 4.52mm;
+  color: #7e8692;
+  font-size: 8.7pt;
+  line-height: 1.16;
 }
 
 .availability span {
-  padding: 0 0.7mm;
-  color: #a1a8b1;
+  padding: 0 0.45mm;
+  color: #7e8692;
 }
 
 .contact {
   display: flex;
   flex-wrap: nowrap;
-  gap: 0 1.35mm;
+  gap: 0;
   margin-bottom: 0;
-  padding-bottom: 1.6mm;
-  border-bottom: 0.5pt solid #d2d8de;
-  color: #7b8594;
-  font-size: 8.4pt;
-  line-height: 1.2;
+  padding-bottom: 1.03mm;
+  border-bottom: 0.9pt solid #dee2e6;
+  color: #7e8692;
+  font-size: 8.7pt;
+  line-height: 1.16;
   white-space: nowrap;
 }
 
 .contact span:not(:last-child)::after {
-  content: " |";
-  margin-left: 1.35mm;
-  color: #a1a8b1;
+  content: " | ";
+  margin-left: 0;
+  margin-right: 2.4pt;
+  color: #7e8692;
 }
 
 .profile {
-  margin-bottom: 7.2mm;
+  margin-bottom: 8.68mm;
 }
 
 .profile-title {
-  margin-bottom: 1.5mm;
-  color: #202733;
-  font-size: 12.1pt;
-  font-weight: 600;
-  letter-spacing: -0.15pt;
-  line-height: 1.15;
+  margin-bottom: 1.55mm;
+  color: #1d252f;
+  font-size: 10.5pt;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.19;
 }
 
 .profile p {
-  max-width: 165mm;
+  max-width: none;
   margin-bottom: 0;
-  font-size: 10pt;
-  line-height: 1.38;
+  font-size: 9.8pt;
+  line-height: 13pt;
 }
 
 section:not(.profile) {
@@ -169,57 +133,61 @@ section:not(.profile) {
 .section-heading {
   display: flex;
   align-items: center;
-  gap: 4mm;
-  margin-bottom: 5.2mm;
-  color: #7b8594;
-  font-size: 8.1pt;
-  font-weight: 600;
-  letter-spacing: 0.05pt;
-  line-height: 1;
+  gap: 3.7mm;
+  margin-bottom: 6.87mm;
+  color: #7e8692;
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.18;
   text-transform: uppercase;
 }
 
 .section-heading::after {
   content: "";
   flex: 1;
-  height: 0.5pt;
-  background: #d2d8de;
+  height: 0;
+  border-top: 0.5pt solid #dee2e6;
+  transform: translateY(0.55pt);
 }
 
 h3 {
   margin-bottom: 0;
-  color: #202733;
-  font-size: 10.2pt;
-  font-weight: 600;
-  letter-spacing: -0.08pt;
-  line-height: 1.2;
+  color: #1d252f;
+  font-size: 10.5pt;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.19;
 }
 
 .role {
-  margin-bottom: 5mm;
-  break-inside: avoid;
+  margin-bottom: 5.6mm;
+  break-inside: auto;
 }
 
 .role:last-child {
   margin-bottom: 0;
 }
 
+.role-last {
+  margin-bottom: 0;
+}
+
 .role-heading {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 4mm;
   margin-bottom: 1.2mm;
 }
 
 .role-heading h3 {
   min-width: 0;
+  tab-size: 203.85pt;
+  white-space: pre;
 }
 
 .location,
 .entry-detail {
-  margin-left: 2mm;
-  color: #7b8594;
+  margin-left: 0;
+  color: #7e8692;
+  font-size: 8.7pt;
   font-weight: 400;
 }
 
@@ -227,11 +195,15 @@ h3 {
 .entry-date {
   flex: 0 0 auto;
   margin-bottom: 0;
-  color: #7b8594;
-  font-family: "Resume Mono", monospace;
-  font-size: 8.1pt;
-  line-height: 1.2;
+  color: #7e8692;
+  font-family: Menlo, "Liberation Mono", monospace;
+  font-size: 8pt;
+  line-height: 1.16;
   white-space: nowrap;
+}
+
+.role-dates {
+  vertical-align: baseline;
 }
 
 .role-description {
@@ -240,18 +212,20 @@ h3 {
 
 ul {
   margin-bottom: 0;
-  padding-left: 4.1mm;
+  padding-left: 13pt;
+  list-style: disc;
 }
 
 li {
-  margin-bottom: 1.15mm;
-  padding-left: 1.1mm;
-  line-height: 1.35;
+  margin-bottom: 1.55mm;
+  padding-left: 0;
+  line-height: 13pt;
 }
 
 li::marker {
-  color: #8b95a2;
-  font-size: 0.7em;
+  color: #7e8692;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 7.2pt;
 }
 
 li:last-child {
@@ -259,23 +233,32 @@ li:last-child {
 }
 
 strong {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .proof {
-  color: #007184;
-  font-family: "Resume Mono", monospace;
-  font-size: 0.92em;
-  font-weight: 600;
-  letter-spacing: -0.1pt;
+  color: #036f83;
+  font-family: Menlo, "Liberation Mono", monospace;
+  font-size: 9.2pt;
+  font-weight: 700;
+  letter-spacing: 0;
 }
 
 .page-break {
   break-before: page;
 }
 
+.experience-heading-block {
+  margin-bottom: 0 !important;
+}
+
+.education-section {
+  margin-top: 7.6mm;
+}
+
 .continued-heading {
   margin-top: 0;
+  break-after: avoid;
 }
 
 .compact-entry {
@@ -296,12 +279,12 @@ strong {
 
 .education-detail {
   margin-top: 1mm;
-  color: #7b8594;
+  color: #7e8692;
 }
 
 .education-detail span {
   padding: 0 0.8mm;
-  color: #a1a8b1;
+  color: #7e8692;
 }
 
 .credentials {
@@ -315,7 +298,7 @@ strong {
 
 .credentials span {
   margin-left: 1.2mm;
-  color: #7b8594;
+  color: #7e8692;
 }
 
 .achievement > p {
@@ -328,7 +311,7 @@ strong {
 
 .skill-row {
   display: grid;
-  grid-template-columns: 40mm 1fr;
+  grid-template-columns: 36.5mm 1fr;
   gap: 0 3mm;
   margin-bottom: 1.4mm;
 }
@@ -338,17 +321,17 @@ strong {
 }
 
 .skill-row h3 {
-  color: #7b8594;
-  font-size: 8.1pt;
-  font-weight: 600;
-  letter-spacing: 0.02pt;
-  line-height: 1.35;
+  color: #7e8692;
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 13pt;
   text-transform: uppercase;
 }
 
 .skill-row p {
   margin-bottom: 0;
-  line-height: 1.35;
+  line-height: 13pt;
 }
 
 .last-section {
@@ -357,9 +340,9 @@ strong {
 
 @media screen {
   body {
-    max-width: 210mm;
+    max-width: 215.9mm;
     margin: 12mm auto;
-    padding: 16mm 17mm 19mm;
+    padding: 16.27mm 19.05mm 18mm;
   }
 }
 </style>
@@ -379,64 +362,60 @@ strong {
 
     <section aria-labelledby="summary-heading" class="profile">
       <h2 id="summary-heading" class="profile-title">Product Designer</h2>
-      <p>I design and ship 0-to-1 AI and SaaS products across healthcare, enterprise, and consumer markets. I work from UX research and product strategy through information architecture, UI design, design systems, prototyping, developer handoff, and front-end implementation. I am strongest at turning complex workflows into clear, production-ready experiences with founders, product managers, and engineers.</p>
+      <p>I design and ship 0-to-1 AI and SaaS products across healthcare, enterprise, and consumer markets. My work spans UX research, product strategy, information architecture, UI design, design systems, prototyping, developer handoff, and front-end implementation. I turn complex workflows into clear, production-ready experiences.</p>
     </section>
 
-    <section aria-labelledby="experience-heading" class="experience">
+    <section aria-labelledby="experience-heading" class="experience-heading-block">
       <h2 id="experience-heading" class="section-heading">Experience</h2>
-
+    </section>
 
   <article class="role">
     <div class="role-heading">
-      <h3>CodeBuddy, Product Designer <span class="location">Pune</span></h3>
-      <p class="role-dates">Feb 2025 to May 2026</p>
+      <h3>CodeBuddy, Product Designer <span class="location">Pune</span>		<span class="role-dates">Feb 2025 to May 2026</span></h3>
     </div>
 
     <ul>
       <li>Led product design across <strong class="proof">seven client products</strong> in healthcare, security, creator economy, and enterprise SaaS, owning UX research, user flows, responsive design, design systems, prototyping, and Figma developer handoff while working directly with founders, product managers, and engineers.</li>
-<li>Led end-to-end design for <strong>N1.care</strong>, an AI clinical intelligence platform supporting patient management, biomarkers, genetics, diagnostics, and clinical workflows. Shaped <strong class="proof">10 modules</strong> from concept to production with a 23-person team and built an <strong class="proof">80+ component design system</strong> with 64 icons and 86 documented colors.</li>
-<li>Created <strong>WCAG-compliant accessible components</strong> and a <strong>data visualization library</strong> for clinician, patient, and administrator personas.</li>
+<li>Led end-to-end design for N1.care, an AI clinical intelligence platform supporting patient management, biomarkers, genetics, diagnostics, and clinical workflows. Shaped <strong class="proof">10 modules</strong> from concept to production with a 23-person team and built an <strong class="proof">80+ component design system</strong> with 64 icons and 86 documented colors.</li>
+<li>Created WCAG-compliant accessible components and a data visualization library for clinician, patient, and administrator personas.</li>
 <li>Built <strong class="proof">45 biomarker chart prototypes</strong> in HTML/CSS/SVG and ApexCharts and wrote <strong class="proof">26 product documentation files</strong> covering 92 platform features and 185 documented items.</li>
-<li>Co-led product design for <strong>Riskabilitie</strong>, an enterprise risk management SaaS, facilitating stakeholder workshops and translating research into multi-level workflows, analytics dashboards, reporting, and product decisions.</li>
-<li>Owned <strong>product design and front-end engineering</strong> for <strong>Proposal Buddy</strong>, an AI proposal management platform with proposal generation, CRM workflows, analytics, approvals, pitch deck creation, and document sharing. Used Claude Code and Codex to accelerate prototyping, design system management, and deployment.</li>
+<li>Co-led product design for Riskabilitie, an enterprise risk management SaaS, facilitating stakeholder workshops and translating research into multi-level workflows, analytics dashboards, reporting, and product decisions.</li>
+<li>Owned product design and front-end engineering for Proposal Buddy, an AI proposal management platform with proposal generation, CRM workflows, analytics, approvals, pitch deck creation, and document sharing. Used Claude Code and Codex to accelerate prototyping, design system management, and deployment.</li>
 <li>Designed and developed <strong class="proof">7+ production Framer websites</strong> for startups and client businesses.</li>
     </ul>
   </article>
 
-
   <article class="role">
     <div class="role-heading">
-      <h3>Duggup, Founding Product Designer <span class="location">Bangalore (Remote)</span></h3>
-      <p class="role-dates">Feb 2023 to Jan 2025</p>
+      <h3>Duggup, Founding Product Designer <span class="location">Bangalore (Remote)</span>	<span class="role-dates">Feb 2023 to Jan 2025</span></h3>
     </div>
 
     <ul>
-      <li>Led end-to-end product design for the Duggup web and mobile applications as the <strong>sole designer</strong>, working with the product owner and a cross-functional development team from inception to launch.</li>
+      <li>Led end-to-end product design for the Duggup web and mobile applications as the sole designer, working with the product owner and a cross-functional development team from inception to launch.</li>
 <li>Shipped version 1.0 in <strong class="proof">five months</strong> and reached <strong class="proof">2,000+ users in the first week</strong>.</li>
 <li>Built a cross-platform design system that <strong class="proof">reduced testing and redesign time by 50%</strong> across web and mobile.</li>
 <li>Shipped new features every two weeks and ran A/B tests with developers to improve key user flows.</li>
     </ul>
   </article>
 
-
-  <article class="role">
+  <article class="role role-last">
     <div class="role-heading">
-      <h3>Consult Anubhav, UX Designer <span class="location">Vadodara</span></h3>
-      <p class="role-dates">Jun 2022 to Jun 2023</p>
+      <h3>Consult Anubhav, UX Designer <span class="location">Vadodara</span>		<span class="role-dates">Jun 2022 to Jun 2023</span></h3>
     </div>
 
     <ul>
-      <li>Led end-to-end UX and UI design for <strong>Draftsy</strong>, a fantasy sports application for BREN LLC, <strong class="proof">increasing engagement by 20%</strong> through UX iterations and A/B-tested design changes.</li>
+      <li>Led end-to-end UX and UI design for Draftsy, a fantasy sports application for BREN LLC, <strong class="proof">increasing engagement by 20%</strong> through UX iterations and A/B-tested design changes.</li>
 <li>Conducted product research, field studies, and usability testing to refine user experience and product features.</li>
 <li>Led a <strong class="proof">team of three designers</strong> across a food delivery service, a logistics and shipment platform, and an internal enterprise survey tool, owning research, design, and handoff.</li>
     </ul>
   </article>
 
-  <div class="page-break"></div><h2 class="section-heading continued-heading">Experience, continued</h2>
+
+    <h2 id="experience-continued-heading" class="section-heading continued-heading">Experience, continued</h2>
+
   <article class="role">
     <div class="role-heading">
-      <h3>Healthplix Technologies, UX Design Intern <span class="location">Bangalore (Remote)</span></h3>
-      <p class="role-dates">Apr 2022 to Jun 2022</p>
+      <h3>Healthplix Technologies, UX Design Intern <span class="location">Bangalore (Remote)</span>	<span class="role-dates">Apr 2022 to Jun 2022</span></h3>
     </div>
 
     <ul>
@@ -445,11 +424,9 @@ strong {
     </ul>
   </article>
 
-
-  <article class="role">
+  <article class="role role-last">
     <div class="role-heading">
-      <h3>Freelance, Freelance Product and UX Designer <span class="location">Vadodara (Remote)</span></h3>
-      <p class="role-dates">Mar 2021 to May 2022</p>
+      <h3>Freelance, Freelance Product and UX Designer <span class="location">Vadodara (Remote)</span>	<span class="role-dates">Mar 2021 to May 2022</span></h3>
     </div>
 
     <ul>
@@ -458,9 +435,8 @@ strong {
 <li>Delivered user flows, usability improvements, logos, marketing posters, carousels, and campaign assets across diverse client projects.</li>
     </ul>
   </article>
-    </section>
 
-    <section aria-labelledby="education-heading">
+    <section aria-labelledby="education-heading" class="education-section">
       <h2 id="education-heading" class="section-heading">Education</h2>
 
         <article class="compact-entry education-entry">

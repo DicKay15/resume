@@ -22,7 +22,7 @@ concurrency:
 
 jobs:
   generate:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     timeout-minutes: 15
 
     steps:
@@ -39,7 +39,7 @@ jobs:
         run: npm ci --omit=optional --ignore-scripts --no-audit --no-fund
 
       - name: Install Chromium
-        run: npx playwright install --with-deps chromium
+        run: npx playwright install chromium
 
       - name: Generate and validate resume
         run: npm run check
