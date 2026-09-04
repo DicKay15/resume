@@ -55,21 +55,21 @@ try {
   await Promise.all([client.send("DOM.enable"), client.send("CSS.enable")]);
   const { root: documentRoot } = await client.send("DOM.getDocument");
   const fontChecks = [
-    ["h1", "Helvetica Neue"],
-    [".profile p", "Helvetica Neue"],
-    [".role-dates", "Menlo"],
-    [".proof", "Menlo"],
+    ["h1", "HelveticaNeue-Light"],
+    [".profile p", "HelveticaNeue"],
+    [".role-dates", "Menlo-Regular"],
+    [".proof", "Menlo-Bold"],
   ];
-  for (const [selector, expectedFamily] of fontChecks) {
+  for (const [selector, expectedPostScriptName] of fontChecks) {
     const { nodeId } = await client.send("DOM.querySelector", {
       nodeId: documentRoot.nodeId,
       selector,
     });
     const { fonts } = await client.send("CSS.getPlatformFontsForNode", { nodeId });
-    const families = fonts.map((font) => font.familyName);
-    if (!families.includes(expectedFamily)) {
+    const postScriptNames = fonts.map((font) => font.postScriptName);
+    if (!postScriptNames.includes(expectedPostScriptName)) {
       throw new Error(
-        `${selector} must render with ${expectedFamily}; found ${families.join(", ") || "no platform font"}.`,
+        `${selector} must render with ${expectedPostScriptName}; found ${postScriptNames.join(", ") || "no platform font"}.`,
       );
     }
   }
