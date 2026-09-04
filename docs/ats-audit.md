@@ -11,6 +11,7 @@ The original two-page PDF passed basic ATS extraction in two independent parsers
 | ATS text exposed only “LinkedIn” and “Portfolio” | Full LinkedIn and portfolio URLs are now visible text and clickable links |
 | Portfolio pointed to Folio 4 | Updated to the current Folio 5 portfolio |
 | Phone lacked an international prefix in visible text | Updated to `+91 83205 65071` |
+| Contact details wrapped across two lines | Consolidated into one aligned line with `Vadodara, India - Remote` and visible URLs |
 | LinkedIn used HTTP | Updated to HTTPS |
 | “About” and “Achievement” were less standard section labels | Renamed to “Professional summary” and “Awards and achievements” |
 | Combined skills/tools/certifications heading | Split into standard Skills and Certifications sections |

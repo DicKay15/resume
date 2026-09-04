@@ -73,6 +73,7 @@ const sourceStrings = [
   data.person.name,
   data.person.title,
   data.person.location,
+  data.person.workPreference,
   data.person.phoneDisplay,
   data.person.email,
   data.person.linkedinDisplay,

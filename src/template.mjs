@@ -6,13 +6,16 @@ const escapeHtml = (value) =>
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
 
+const renderInline = (value) =>
+  escapeHtml(value).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+
 const link = (label, url, className = "") =>
   `<a${className ? ` class="${className}"` : ""} href="${escapeHtml(url)}">${escapeHtml(label)}</a>`;
 
 const renderSkillGroup = ({ label, items }) => `
   <p class="skill-line">
     <strong>${escapeHtml(label)}:</strong>
-    ${items.map(escapeHtml).join(", ")}
+    ${items.map(renderInline).join(", ")}
   </p>`;
 
 const renderExperience = (role) => `
@@ -23,7 +26,7 @@ const renderExperience = (role) => `
       <p class="role-meta"><strong>${escapeHtml(role.title)}</strong> | ${escapeHtml(role.dates)}</p>
     </div>
     <ul>
-      ${role.bullets.map((bullet) => `<li>${escapeHtml(bullet)}</li>`).join("\n")}
+      ${role.bullets.map((bullet) => `<li>${renderInline(bullet)}</li>`).join("\n")}
     </ul>
   </article>`;
 
@@ -44,20 +47,18 @@ export function renderResume(data, css) {
     <header class="resume-header">
       <h1>${escapeHtml(person.name)}</h1>
       <p class="headline">${escapeHtml(person.title)}</p>
-      <p class="contact contact-primary">
-        <span>${escapeHtml(person.location)}</span>
+      <p class="contact">
+        <span>${escapeHtml(person.location)} - ${escapeHtml(person.workPreference)}</span>
         <span>${link(person.phoneDisplay, person.phoneUrl)}</span>
         <span>${link(person.email, `mailto:${person.email}`)}</span>
-      </p>
-      <p class="contact contact-links">
-        <span>LinkedIn: ${link(person.linkedinDisplay, person.linkedinUrl)}</span>
-        <span>Portfolio: ${link(person.portfolioDisplay, person.portfolioUrl)}</span>
+        <span>${link(person.linkedinDisplay, person.linkedinUrl)}</span>
+        <span>${link(person.portfolioDisplay, person.portfolioUrl)}</span>
       </p>
     </header>
 
     <section aria-labelledby="summary-heading">
       <h2 id="summary-heading">Professional summary</h2>
-      <p>${escapeHtml(data.summary)}</p>
+      <p>${renderInline(data.summary)}</p>
     </section>
 
     <section aria-labelledby="skills-heading" class="skills">

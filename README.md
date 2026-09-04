@@ -22,6 +22,8 @@ Open that file on GitHub, click the pencil button, make the change, and commit i
 3. Check the section order, links, punctuation, and page count.
 4. Commit the regenerated files back to this repository.
 
+Wrap a short phrase in `**double asterisks**` when it should be bold for recruiter skimming. The generator keeps the text searchable and removes the asterisks from the PDF.
+
 ## Project structure
 
 ```text
