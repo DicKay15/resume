@@ -76,6 +76,18 @@ export function renderResume(data, css) {
     </section>
     ${data.experience.map((role, index) => renderExperience(role, index === data.experience.length - 1)).join("\n")}
 
+    ${data.builds?.length ? `
+    <section aria-labelledby="builds-heading" class="builds-section">
+      <h2 id="builds-heading" class="section-heading">Selected builds</h2>
+      ${data.builds.map((item) => `
+        <article class="compact-entry build-entry">
+          <div class="entry-row">
+            <h3>${escapeHtml(item.name)} <span class="entry-detail">${escapeHtml(item.summary)}</span></h3>
+            <p class="entry-date">${link(item.linkDisplay, item.url, "build-link")}</p>
+          </div>
+        </article>`).join("\n")}
+    </section>` : ""}
+
     <section aria-labelledby="education-heading" class="education-section">
       <h2 id="education-heading" class="section-heading">Education</h2>
       ${data.education.map((item) => `

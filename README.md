@@ -69,3 +69,23 @@ On macOS, the generator automatically uses installed Google Chrome when availabl
 - All active resume punctuation uses ASCII hyphens
 
 See [the ATS audit](docs/ats-audit.md) for the complete correction record.
+
+## Two documents
+
+| Content file | Output | Target roles |
+|---|---|---|
+| `content/resume.yml` | `Dhrumil-Kherde-Product-Designer-Resume.pdf` | Product Designer, UX Designer, Senior Product Designer |
+| `content/resume-design-engineer.yml` | `Dhrumil-Kherde-Design-Engineer-Resume.pdf` | Design Engineer, UX Engineer, Design Systems Engineer |
+
+```
+npm run check                                    # main resume
+npm run build -- resume-design-engineer.yml      # variant
+npm run validate -- resume-design-engineer.yml
+node scripts/preflight.mjs [content-file.yml]    # the Preflight report's machine checks
+```
+
+`scripts/preflight.mjs` reproduces the 13 Sep 2026 "Kherde Resume Preflight"
+machine checks (text extraction, column structure, ASCII, fonts, contact block,
+hyperlinks, section headers, job title field, date format, page count, footer
+leak). Run it after any change. Findings log: `docs/resume/preflight-audit-2026-09-13.md`
+in the personal docs repo.

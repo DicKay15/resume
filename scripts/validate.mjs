@@ -107,6 +107,7 @@ const sourceStrings = [
     ...(role.description ? [role.description] : []),
     ...role.bullets,
   ]),
+  ...(data.builds ?? []).flatMap((item) => [item.name, item.summary, item.linkDisplay]),
   ...data.education.flatMap((item) => [
     item.institution,
     item.location,
@@ -171,6 +172,7 @@ const annotationUrls = new Set(
     .filter(Boolean),
 );
 for (const url of [
+  ...(data.builds ?? []).map((item) => item.url),
   data.person.phoneUrl,
   `mailto:${data.person.email}`,
   data.person.linkedinUrl,

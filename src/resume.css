@@ -334,6 +334,25 @@ strong {
   margin-top: 1mm;
 }
 
+.builds-section {
+  margin-top: 2.1mm;
+}
+
+.build-entry {
+  margin-bottom: 0.9mm;
+}
+
+.build-entry:last-child {
+  margin-bottom: 0;
+}
+
+.build-link {
+  color: #1d252f;
+  font-family: Menlo, "Liberation Mono", monospace;
+  font-size: 7.6pt;
+  white-space: nowrap;
+}
+
 .skills {
   margin-bottom: 0;
 }
