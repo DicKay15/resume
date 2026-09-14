@@ -2,6 +2,10 @@ meta:
   version: 1
   outputFilename: Dhrumil-Kherde-Product-Designer-Resume.pdf
   pageTitle: Dhrumil Kherde - Product Designer Resume
+  # Two pages, but the whole Experience section must fit on page one, with no
+  # role split across the break. Education, Awards and Skills start page two.
+  expectedPages: 2
+  experienceOwnsFirstPage: true
 
 person:
   name: Dhrumil Kherde
@@ -105,22 +109,25 @@ experience:
     bullets:
       - Founding and only designer for [Duggup](https://folio5.dhrumilkherde.com/work/duggup/) web and mobile. Shipped version 1.0 in five months and [[2,000+ signed up in the first week]].
       - Built one cross-platform design system rather than two, halving redesign and testing time.
-      - Designed contribution, search, challenge, and event-purchase flows, then tracked activation and retention in Amplitude and A/B tested the weakest steps.
+      - Designed the contribution, search, challenge, activity-tracking, and event-purchase flows, working directly with the product owner and dev team from inception through launch.
+      - Shipped on a bi-weekly cadence, tracking daily active users, session length, and retention in Amplitude, and A/B testing the weakest steps with engineering.
 
   - company: Consult Anubhav
     location: Vadodara
     title: UX Designer
     dates: Jun 2022 - Jun 2023
     bullets:
-      - Led design for Draftsy, a fantasy sports app for BREN LLC. Interviews showed drafts stalled on timed turns, and the auto-pick design that followed lifted engagement [[20%]].
-      - Ran a team of three designers across food delivery, logistics, and enterprise survey products. Part-time from Feb 2023, alongside the founding role at Duggup.
+      - Led design for Draftsy, a real-time fantasy sports app for BREN LLC. Structured interviews with four active users and the founder showed drafts were stalling on timed turns.
+      - Rebuilt team drafting, timed turns, auto-pick, league, chat, and retention flows around that finding, which contributed to a [[20% engagement increase]].
+      - Ran a team of three designers across concurrent food delivery, logistics, and enterprise survey products, standardising design review and developer handoff across all three. Part-time from Feb 2023, alongside the founding role at Duggup.
 
   - company: Healthplix Technologies
     location: Bangalore (Remote)
     title: UX Design Intern
     dates: Apr 2022 - Jun 2022
     bullets:
-      - Expanded the design system with 26 components and variants, and designed the admin and campaign tools marketing ran on.
+      - Expanded the design system with 26 components and variants, bringing the product to consistent UI and cutting design-to-development handoff time by roughly 20%.
+      - Designed the admin panels and on-site campaign interfaces internal teams ran on, reducing campaign launch turnaround by 33%.
 
   - company: Freelance
     location: Vadodara (Remote)
@@ -128,6 +135,8 @@ experience:
     dates: Mar 2021 - May 2022
     bullets:
       - Rebuilt Baroda Public School's learning platform, lifting student interaction [[35%]] and course completion 20%.
+      - Led a brand identity project that grew the client's audience 350% in two months.
+      - Delivered product flows, brand, and campaign design across 5+ client projects.
 
 education:
   - institution: SVIT (Gujarat Technological University)

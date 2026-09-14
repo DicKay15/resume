@@ -53,7 +53,7 @@ export function renderResume(data, css) {
   <title>${escapeHtml(data.meta.pageTitle)}</title>
   <style>${css}</style>
 </head>
-<body>
+<body${(data.meta.expectedPages ?? 1) > 1 ? ' class="density-comfortable"' : ""}>
   <main>
     <header class="resume-header">
       <h1>${escapeHtml(person.name)}</h1>
@@ -88,7 +88,7 @@ export function renderResume(data, css) {
         </article>`).join("\n")}
     </section>` : ""}
 
-    <section aria-labelledby="education-heading" class="education-section">
+    <section aria-labelledby="education-heading" class="education-section${data.meta.experienceOwnsFirstPage ? " page-two-start" : ""}">
       <h2 id="education-heading" class="section-heading">Education</h2>
       ${data.education.map((item) => `
         <article class="compact-entry education-entry">

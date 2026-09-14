@@ -277,6 +277,16 @@ strong {
   margin-bottom: 0 !important;
 }
 
+.page-two-start {
+  break-before: page;
+  margin-top: 0 !important;
+}
+
+/* No role may straddle the page break. */
+.role {
+  break-inside: avoid;
+}
+
 .education-section {
   margin-top: 2.1mm;
 }
@@ -386,4 +396,56 @@ strong {
     margin: 12mm auto;
     padding: 16.27mm 19.05mm 18mm;
   }
+}
+
+
+/* ---------------------------------------------------------------------------
+   Comfortable density. Applied only when a document declares more than one
+   page (meta.expectedPages > 1), so the one-page variants keep the tighter
+   setting they are laid out for. Page margins stay shared, because @page
+   cannot be scoped to a class.
+   --------------------------------------------------------------------------- */
+.density-comfortable {
+  font-size: 9.6pt;
+  line-height: 1.33;
+}
+
+.density-comfortable h1 {
+  font-size: 22pt;
+}
+
+.density-comfortable .profile {
+  margin-bottom: 4.4mm;
+}
+
+.density-comfortable .profile p {
+  font-size: 9.6pt;
+  line-height: 12.6pt;
+}
+
+.density-comfortable .section-heading {
+  margin-bottom: 2.3mm;
+}
+
+.density-comfortable .role {
+  margin-bottom: 2.9mm;
+}
+
+.density-comfortable .role-heading {
+  margin-bottom: 1.3mm;
+}
+
+.density-comfortable .role-description {
+  margin-bottom: 1.5mm;
+}
+
+.density-comfortable li {
+  margin-bottom: 1.05mm;
+  line-height: 12.1pt;
+}
+
+.density-comfortable .skill-row {
+  margin-bottom: 1.2mm;
+  font-size: 9pt;
+  line-height: 11.6pt;
 }

@@ -7,6 +7,7 @@ meta:
   version: 1
   outputFilename: Dhrumil-Kherde-Design-Engineer-Resume.pdf
   pageTitle: Dhrumil Kherde - Design Engineer Resume
+  expectedPages: 1
 
 person:
   name: Dhrumil Kherde

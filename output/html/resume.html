@@ -284,6 +284,16 @@ strong {
   margin-bottom: 0 !important;
 }
 
+.page-two-start {
+  break-before: page;
+  margin-top: 0 !important;
+}
+
+/* No role may straddle the page break. */
+.role {
+  break-inside: avoid;
+}
+
 .education-section {
   margin-top: 2.1mm;
 }
@@ -394,9 +404,61 @@ strong {
     padding: 16.27mm 19.05mm 18mm;
   }
 }
+
+
+/* ---------------------------------------------------------------------------
+   Comfortable density. Applied only when a document declares more than one
+   page (meta.expectedPages > 1), so the one-page variants keep the tighter
+   setting they are laid out for. Page margins stay shared, because @page
+   cannot be scoped to a class.
+   --------------------------------------------------------------------------- */
+.density-comfortable {
+  font-size: 9.6pt;
+  line-height: 1.33;
+}
+
+.density-comfortable h1 {
+  font-size: 22pt;
+}
+
+.density-comfortable .profile {
+  margin-bottom: 4.4mm;
+}
+
+.density-comfortable .profile p {
+  font-size: 9.6pt;
+  line-height: 12.6pt;
+}
+
+.density-comfortable .section-heading {
+  margin-bottom: 2.3mm;
+}
+
+.density-comfortable .role {
+  margin-bottom: 2.9mm;
+}
+
+.density-comfortable .role-heading {
+  margin-bottom: 1.3mm;
+}
+
+.density-comfortable .role-description {
+  margin-bottom: 1.5mm;
+}
+
+.density-comfortable li {
+  margin-bottom: 1.05mm;
+  line-height: 12.1pt;
+}
+
+.density-comfortable .skill-row {
+  margin-bottom: 1.2mm;
+  font-size: 9pt;
+  line-height: 11.6pt;
+}
 </style>
 </head>
-<body>
+<body class="density-comfortable">
   <main>
     <header class="resume-header">
       <h1>Dhrumil Kherde</h1>
@@ -439,7 +501,8 @@ strong {
     <ul>
       <li>Founding and only designer for <a class="case-link" href="https://folio5.dhrumilkherde.com/work/duggup/">Duggup</a> web and mobile. Shipped version 1.0 in five months and <strong class="proof">2,000+ signed up in the first week</strong>.</li>
 <li>Built one cross-platform design system rather than two, halving redesign and testing time.</li>
-<li>Designed contribution, search, challenge, and event-purchase flows, then tracked activation and retention in Amplitude and A/B tested the weakest steps.</li>
+<li>Designed the contribution, search, challenge, activity-tracking, and event-purchase flows, working directly with the product owner and dev team from inception through launch.</li>
+<li>Shipped on a bi-weekly cadence, tracking daily active users, session length, and retention in Amplitude, and A/B testing the weakest steps with engineering.</li>
     </ul>
   </article>
 
@@ -449,8 +512,9 @@ strong {
     </div>
 
     <ul>
-      <li>Led design for Draftsy, a fantasy sports app for BREN LLC. Interviews showed drafts stalled on timed turns, and the auto-pick design that followed lifted engagement <strong class="proof">20%</strong>.</li>
-<li>Ran a team of three designers across food delivery, logistics, and enterprise survey products. Part-time from Feb 2023, alongside the founding role at Duggup.</li>
+      <li>Led design for Draftsy, a real-time fantasy sports app for BREN LLC. Structured interviews with four active users and the founder showed drafts were stalling on timed turns.</li>
+<li>Rebuilt team drafting, timed turns, auto-pick, league, chat, and retention flows around that finding, which contributed to a <strong class="proof">20% engagement increase</strong>.</li>
+<li>Ran a team of three designers across concurrent food delivery, logistics, and enterprise survey products, standardising design review and developer handoff across all three. Part-time from Feb 2023, alongside the founding role at Duggup.</li>
     </ul>
   </article>
 
@@ -460,7 +524,8 @@ strong {
     </div>
 
     <ul>
-      <li>Expanded the design system with 26 components and variants, and designed the admin and campaign tools marketing ran on.</li>
+      <li>Expanded the design system with 26 components and variants, bringing the product to consistent UI and cutting design-to-development handoff time by roughly 20%.</li>
+<li>Designed the admin panels and on-site campaign interfaces internal teams ran on, reducing campaign launch turnaround by 33%.</li>
     </ul>
   </article>
 
@@ -471,12 +536,14 @@ strong {
 
     <ul>
       <li>Rebuilt Baroda Public School&#039;s learning platform, lifting student interaction <strong class="proof">35%</strong> and course completion 20%.</li>
+<li>Led a brand identity project that grew the client&#039;s audience 350% in two months.</li>
+<li>Delivered product flows, brand, and campaign design across 5+ client projects.</li>
     </ul>
   </article>
 
 
 
-    <section aria-labelledby="education-heading" class="education-section">
+    <section aria-labelledby="education-heading" class="education-section page-two-start">
       <h2 id="education-heading" class="section-heading">Education</h2>
 
         <article class="compact-entry education-entry">

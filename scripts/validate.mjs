@@ -52,8 +52,9 @@ for (const visibleUrl of [data.person.linkedinDisplay, data.person.portfolioDisp
 
 const loadingTask = getDocument({ data: new Uint8Array(pdfBuffer) });
 const pdf = await loadingTask.promise;
-if (pdf.numPages !== 1) {
-  throw new Error(`Expected exactly 1 PDF page, found ${pdf.numPages}.`);
+const expectedPages = data.meta.expectedPages ?? 1;
+if (pdf.numPages !== expectedPages) {
+  throw new Error(`Expected exactly ${expectedPages} PDF page(s), found ${pdf.numPages}.`);
 }
 
 const pageTexts = [];
@@ -164,6 +165,19 @@ for (const role of data.experience) {
 const educationIndex = normalizedPdf.indexOf(normalize("Education"), experienceCursor + 1);
 if (educationIndex === -1) {
   throw new Error("Education must follow the final experience bullet in PDF reading order.");
+}
+
+// The whole Experience section must land on page one, with Education starting
+// page two, so no role is split across the break.
+if (data.meta.experienceOwnsFirstPage) {
+  const firstPage = normalize(pageTexts[0]);
+  const lastBullet = data.experience.at(-1).bullets.at(-1);
+  if (!firstPage.includes(normalize(stripMarkup(lastBullet)))) {
+    throw new Error("Experience must end on page 1; the final bullet spilled over.");
+  }
+  if (firstPage.includes(normalize("Education"))) {
+    throw new Error("Education must start on page 2, not share page 1 with Experience.");
+  }
 }
 
 const annotationUrls = new Set(

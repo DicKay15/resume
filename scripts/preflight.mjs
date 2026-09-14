@@ -92,7 +92,15 @@ check("Job title field", badTitles.length === 0 && headingLines.length === data.
 const dateOk = data.experience.every((r) => /^[A-Z][a-z]{2} \d{4} - ([A-Z][a-z]{2} \d{4}|Present)$/.test(r.dates));
 check("Date format", dateOk, "All ranges use the ASCII 'Mon YYYY - Mon YYYY' pattern.");
 
-check("Page count", pdf.numPages === 1, `${pdf.numPages} page.`);
+const expectedPages = data.meta.expectedPages ?? 1;
+check("Page count", pdf.numPages === expectedPages, `${pdf.numPages} page(s), expected ${expectedPages}.`);
+if (data.meta.experienceOwnsFirstPage) {
+  const p1 = pages[0].map((x) => x.str).join(" ").replace(/\s+/g, " ");
+  const lastBullet = data.experience.at(-1).bullets.at(-1);
+  check("Experience owns page 1",
+    norm(p1).includes(norm(strip(lastBullet))) && !norm(p1).includes(norm("Education")),
+    "Whole Experience section on page 1, Education starts page 2, no role split.");
+}
 const footerLeak = /Product Designer \d/.test(text);
 check("No footer leak", !footerLeak,
   footerLeak ? '"Product Designer 1" still in the text stream' : 'Running footer removed; no "Product Designer 1" string.');
