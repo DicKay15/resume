@@ -119,14 +119,14 @@ experience:
       - Rebuilt Baroda Public School's learning platform, lifting student interaction 35% and course completion 20%.
 
 builds:
+  - name: GetPosals
+    summary: AI proposal platform, designed and built end to end. React, TypeScript, Workers.
+    linkDisplay: proposal.dhrumilkherde.com
+    url: https://proposal.dhrumilkherde.com/
   - name: Pickle Royale
     summary: 2v2 pickleball rankings with a custom Elo engine. React, Workers, D1.
     linkDisplay: pickleball.dhrumilkherde.com
     url: https://pickleball.dhrumilkherde.com/
-  - name: Tinct
-    summary: Design token studio that generates and exports accessible colour systems.
-    linkDisplay: tinct.dhrumilkherde.com
-    url: https://tinct.dhrumilkherde.com/
   - name: Hevy Tracker
     summary: Training log with a 3D anatomical body map and weekly analysis.
     linkDisplay: hevy.dhrumilkherde.com
