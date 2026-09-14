@@ -13,113 +13,121 @@ person:
   email: dhrumil.kherde@gmail.com
   linkedinDisplay: linkedin.com/in/dhrumil-dk
   linkedinUrl: https://www.linkedin.com/in/dhrumil-dk/
-  portfolioDisplay: folio4.dhrumilkherde.com
-  portfolioUrl: https://folio4.dhrumilkherde.com/
+  portfolioDisplay: folio5.dhrumilkherde.com
+  portfolioUrl: https://folio5.dhrumilkherde.com/
 
 summary: >-
-  Product Designer with 5+ years taking 0-to-1 healthcare, AI, and enterprise
-  SaaS products from discovery to production. I lead research, interaction
-  design, design systems, prototyping, and usability testing, then work closely
-  with engineers or build the front end in React, TypeScript, and Framer. My
-  focus is making complex, high-stakes workflows clear and ready to ship.
+  Product designer with 5+ years on 0-to-1 healthcare, AI, and enterprise SaaS
+  products. I own research, interaction design, and design systems, and I build
+  the front end in React and TypeScript when shipping it myself is faster. Most
+  of my work is making complicated clinical and enterprise workflows simple
+  enough to act on.
 
 skills:
   - label: Design
     items:
       - Product Design
       - User-Centered Design
-      - Human-Centered Design
-      - Product Discovery
       - Product Strategy
       - UX Research
-      - User Research
-      - User Interviews
+      - Personas
       - Journey Mapping
-      - Service Design
+      - Competitive Analysis
+      - Heuristic Evaluation
       - Usability Testing
       - A/B Testing
       - Information Architecture
-      - User Flows
       - Wireframing
       - Prototyping
       - Interaction Design
-      - Responsive Design
+      - Motion Design
       - Design Systems
       - Accessibility (WCAG)
       - Data Visualization
   - label: Collaboration and delivery
     items:
       - Stakeholder Workshops
-      - Workshop Facilitation
-      - Stakeholder Management
       - Cross-functional Collaboration
-      - Design Documentation
+      - Agile
+      - Jira
+      - Design QA
       - Developer Handoff
-      - Design-to-code Collaboration
+      - Mentorship
   - label: Product contexts
     items:
       - AI Products
       - SaaS
-      - B2B
       - Enterprise Software
       - Healthcare Technology
-      - Mobile App Design
-      - Web App Design
+      - Mobile App Design, iOS and Android
       - Analytics Dashboards
   - label: Tools and technology
     items:
       - Figma
       - Framer
-      - Webflow
-      - Miro
-      - Notion
       - React
       - TypeScript
-      - HTML/CSS
       - Tailwind CSS
       - ApexCharts
       - Cloudflare Workers
       - Claude Code
 
 experience:
+  # ---------------------------------------------------------------------------
+  # Preflight finding 02 (Critical, skipped by request on 2026-09-14).
+  # The most recent date below is May 2026. The report calls a current-role line
+  # "the highest-payoff fix on the list and it takes ten minutes."
+  # To close the gap, delete the '# ' from the seven lines below and rebuild.
+  #
+  # - company: NitiSol
+  #   location: Remote
+  #   title: Product Designer
+  #   dates: May 2026 - Present
+  #   bullets:
+  #     - Design and ship client products end to end, including a magazine production tool and a school staff portal, covering research, interface design, and the front-end build.
+  # ---------------------------------------------------------------------------
+
   - company: CodeBuddy
     location: Pune
     title: Product Designer
-    dates: Feb 2025 to May 2026
+    dates: Feb 2025 - May 2026
+    description: Product design across seven client products in healthcare, security, creator economy, and enterprise SaaS, including Expand Health's four-score longevity triage.
     bullets:
-      - Led product design across [[seven client products]] in healthcare, security, creator economy, and enterprise SaaS, partnering with founders, product managers, and engineers from discovery through production handoff.
-      - Led end-to-end design for N1 Care, an AI clinical intelligence platform, as the sole designer on a 23-person team. Shaped [[10 product areas]] spanning patient management, clinical records, diagnostics, and clinician-reviewed reports; an internal clinician review reported [[75% less analysis and report-generation time]].
-      - Built N1 Care's [[80+ component design system]], defined human-review states and a [[28-point AI report quality checklist]], and prototyped [[45 clinical data visualizations]] in HTML/CSS/SVG and ApexCharts for engineering validation.
-      - Designed the full Expand Health AI longevity platform, turning wearable, lab, lifestyle, and clinical data into a four-score triage workflow and an interactive prototype used for team and investor reviews.
-      - Co-led Riskabilitie, an enterprise risk-management SaaS, using stakeholder workshops to define permission-aware workflows, assessment and approval flows, analytics dashboards, and executive reporting.
-      - Owned product design and front-end engineering for Proposal Buddy, shown publicly as GetPosals, shipping lead management, AI-assisted drafting, approvals, analytics, document sharing, and client delivery in React, TypeScript, and Cloudflare.
-      - Designed and developed [[7+ production Framer websites]] for startups and client businesses.
+      - Sole designer on [N1 Care](https://folio5.dhrumilkherde.com/work/n1-care/), an AI clinical intelligence platform built by a team of 23, across 10 product areas. An internal clinician review measured [[75% less analysis and report time]].
+      - Built its [[80+ component design system]] and a 28-point checklist deciding when AI-generated report content needs a clinician to sign off.
+      - Reframed Riskabilitie, an enterprise risk platform, around permission-aware views after workshops showed executives and risk owners needed different reads of one assessment.
+      - Owned design and front-end engineering for Proposal Buddy, shipping it live in React, TypeScript, and Cloudflare Workers, plus 7+ production Framer sites.
 
   - company: Duggup
     location: Bangalore (Remote)
     title: Founding Product Designer
-    dates: Feb 2023 to Jan 2025
+    dates: Feb 2023 - Jan 2025
     bullets:
-      - Led end-to-end product design for Duggup's web and mobile applications as the founding and sole designer, shipping version 1.0 in [[five months]] and reaching [[2,000+ users in the first week]].
-      - Built a cross-platform design system that [[reduced testing and redesign time by 50%]] across web and mobile.
-      - Designed contribution, search, challenge, activity-tracking, and event-purchase flows; tracked daily active users, session length, and retention in Amplitude and ran A/B tests with developers.
+      - Founding and only designer for [Duggup](https://folio5.dhrumilkherde.com/work/duggup/) web and mobile. Shipped version 1.0 in five months and [[2,000+ signed up in the first week]].
+      - Built one cross-platform design system rather than two, halving redesign and testing time.
+      - Designed contribution, search, challenge, and event-purchase flows, then tracked activation and retention in Amplitude and A/B tested the weakest steps.
 
   - company: Consult Anubhav
     location: Vadodara
     title: UX Designer
-    dates: Jun 2022 to Jun 2023
+    dates: Jun 2022 - Jun 2023
     bullets:
-      - Led end-to-end product design for Draftsy, a real-time fantasy sports application for BREN LLC. Conducted structured interviews with four active users and the founder, then designed team drafting, timed turns, auto-pick, league, chat, and retention flows that contributed to a [[20% engagement increase]].
-      - Led a [[team of three designers]] across concurrent food delivery, logistics, and enterprise survey products, standardizing design review and developer handoff.
+      - Led design for Draftsy, a fantasy sports app for BREN LLC. Interviews showed drafts stalled on timed turns, and the auto-pick design that followed lifted engagement [[20%]].
+      - Ran a team of three designers across food delivery, logistics, and enterprise survey products.
 
   - company: Healthplix Technologies
     location: Bangalore (Remote)
     title: UX Design Intern
-    dates: Apr 2022 to Jun 2022
-    pageBreakBefore: true
+    dates: Apr 2022 - Jun 2022
     bullets:
-      - Expanded the Healthplix design system with [[26 components and variants]], standardizing product UI and reducing design-to-development handoff time by approximately 20%.
-      - Designed admin panels and on-site marketing campaign interfaces for internal teams, [[reducing campaign launch turnaround time by 33%]].
+      - Expanded the design system with 26 components and variants, and designed the admin and campaign tools marketing ran on.
+
+  - company: Freelance
+    location: Vadodara (Remote)
+    title: Product and Brand Designer
+    dates: Mar 2021 - May 2022
+    bullets:
+      - Rebuilt Baroda Public School's learning platform, lifting student interaction [[35%]] and course completion 20%.
 
 education:
   - institution: SVIT (Gujarat Technological University)
@@ -127,17 +135,11 @@ education:
     qualification: Bachelor of Engineering, Mechanical Engineering
     date: May 2022
 
-certifications:
-  - name: UX Design Foundations
-    issuer: Uxcel
-  - name: Color Psychology
-    issuer: Uxcel
-
 achievement:
   title: Top 50 Rising Designers
   organization: Upraised, Embark
   date: Oct 2021
-  description: Ranked in the top 50 rising designers among 455,534 students from more than 20,000 colleges in Embark 2021.
+  description: Top 50 of 455,534 students across 20,000+ colleges.
 
 languages:
   - English

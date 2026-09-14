@@ -7,14 +7,14 @@
 
 @page {
   size: Letter;
-  margin: 16.27mm 19.05mm 18mm;
+  margin: 13.5mm 17.5mm 13mm;
 }
 
 :root {
   color-scheme: light;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 9.8pt;
-  line-height: 1.3265;
+  font-size: 9.3pt;
+  line-height: 1.28;
   color: #1d252f;
   background: transparent;
 }
@@ -69,14 +69,26 @@ h1 {
   margin-bottom: 1.33mm;
   color: #1d252f;
   font-family: "Resume Name", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 23pt;
+  font-size: 21pt;
   font-weight: 400;
   letter-spacing: -0.35pt;
   line-height: 1.05;
 }
 
+.portfolio-lead {
+  margin-bottom: 1.1mm;
+}
+
+.portfolio-link {
+  color: #1d252f;
+  font-size: 10.6pt;
+  font-weight: 500;
+  letter-spacing: -0.1pt;
+  line-height: 1.15;
+}
+
 .availability {
-  margin-bottom: 4.52mm;
+  margin-bottom: 3.3mm;
   color: #7e8692;
   font-size: 8.7pt;
   line-height: 1.16;
@@ -108,11 +120,11 @@ h1 {
 }
 
 .profile {
-  margin-bottom: 8.68mm;
+  margin-bottom: 3.4mm;
 }
 
 .profile-title {
-  margin-bottom: 1.55mm;
+  margin-bottom: 1.2mm;
   color: #1d252f;
   font-size: 10.5pt;
   font-weight: 500;
@@ -123,19 +135,19 @@ h1 {
 .profile p {
   max-width: none;
   margin-bottom: 0;
-  font-size: 9.8pt;
-  line-height: 13pt;
+  font-size: 9.3pt;
+  line-height: 11.9pt;
 }
 
 section:not(.profile) {
-  margin-bottom: 6.2mm;
+  margin-bottom: 2.3mm;
 }
 
 .section-heading {
   display: flex;
   align-items: center;
   gap: 3.7mm;
-  margin-bottom: 6.87mm;
+  margin-bottom: 1.8mm;
   color: #7e8692;
   font-size: 8pt;
   font-weight: 700;
@@ -162,7 +174,7 @@ h3 {
 }
 
 .role {
-  margin-bottom: 5.6mm;
+  margin-bottom: 2.4mm;
   break-inside: auto;
 }
 
@@ -175,7 +187,7 @@ h3 {
 }
 
 .role-heading {
-  margin-bottom: 1.2mm;
+  margin-bottom: 1.0mm;
 }
 
 .role-heading h3 {
@@ -209,7 +221,7 @@ h3 {
 }
 
 .role-description {
-  margin-bottom: 1.6mm;
+  margin-bottom: 1.2mm;
 }
 
 ul {
@@ -219,9 +231,9 @@ ul {
 }
 
 li {
-  margin-bottom: 1.55mm;
+  margin-bottom: 0.8mm;
   padding-left: 0;
-  line-height: 13pt;
+  line-height: 11.5pt;
 }
 
 li::marker {
@@ -239,11 +251,22 @@ strong {
 }
 
 .proof {
-  color: #036f83;
-  font-family: Menlo, "Liberation Mono", monospace;
-  font-size: 9.2pt;
+  color: #1d252f;
   font-weight: 700;
-  letter-spacing: 0;
+}
+
+/* Finding 08: deep links to case studies stay readable as text on paper. */
+.case-link {
+  color: #1d252f;
+  text-decoration: underline;
+  text-decoration-color: #b9c0c9;
+  text-underline-offset: 1.6pt;
+}
+
+/* Finding 12b: the pipe delimiters in the role heading. */
+.sep {
+  color: #b9c0c9;
+  font-weight: 400;
 }
 
 .page-break {
@@ -255,7 +278,7 @@ strong {
 }
 
 .education-section {
-  margin-top: 7.6mm;
+  margin-top: 2.1mm;
 }
 
 .continued-heading {
@@ -316,8 +339,9 @@ strong {
 }
 
 .skill-row {
-  margin-bottom: 1.4mm;
-  line-height: 13pt;
+  margin-bottom: 0.8mm;
+  font-size: 8.7pt;
+  line-height: 10.6pt;
 }
 
 .skill-row:last-child {
@@ -326,10 +350,10 @@ strong {
 
 .skill-label {
   color: #7e8692;
-  font-size: 8pt;
+  font-size: 7.6pt;
   font-weight: 700;
   letter-spacing: 0;
-  line-height: 13pt;
+  line-height: 10.6pt;
   text-transform: uppercase;
 }
 

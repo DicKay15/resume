@@ -5,8 +5,12 @@ import YAML from "yaml";
 import { getDocument } from "pdfjs-dist/legacy/build/pdf.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const yamlPath = path.join(root, "content", "resume.yml");
-const htmlPath = path.join(root, "output", "html", "resume.html");
+const contentArg = process.argv[2] || "resume.yml";
+const yamlPath = path.isAbsolute(contentArg)
+  ? contentArg
+  : path.join(root, "content", contentArg);
+const htmlBasename = path.basename(yamlPath, path.extname(yamlPath));
+const htmlPath = path.join(root, "output", "html", `${htmlBasename}.html`);
 
 const yamlSource = await fs.readFile(yamlPath, "utf8");
 const data = YAML.parse(yamlSource);
@@ -23,7 +27,6 @@ const requiredTopLevel = [
   "skills",
   "experience",
   "education",
-  "certifications",
   "achievement",
   "languages",
 ];
@@ -49,8 +52,8 @@ for (const visibleUrl of [data.person.linkedinDisplay, data.person.portfolioDisp
 
 const loadingTask = getDocument({ data: new Uint8Array(pdfBuffer) });
 const pdf = await loadingTask.promise;
-if (pdf.numPages !== 2) {
-  throw new Error(`Expected exactly 2 PDF pages, found ${pdf.numPages}.`);
+if (pdf.numPages !== 1) {
+  throw new Error(`Expected exactly 1 PDF page, found ${pdf.numPages}.`);
 }
 
 const pageTexts = [];
@@ -80,6 +83,11 @@ const normalize = (value) =>
     .replace(/[^a-z0-9+%@.]/g, "");
 const normalizedPdf = normalize(pdfText);
 
+const stripMarkup = (value) =>
+  String(value)
+    .replace(/\[\[(.+?)\]\]/g, "$1")
+    .replace(/\[([^\[\]]+?)\]\((https?:\/\/[^)\s]+)\)/g, "$1");
+
 const sourceStrings = [
   data.person.name,
   data.person.title,
@@ -105,7 +113,6 @@ const sourceStrings = [
     item.qualification,
     item.date,
   ]),
-  ...data.certifications.flatMap((item) => [item.name, item.issuer]),
   data.achievement.title,
   data.achievement.organization,
   data.achievement.date,
@@ -113,7 +120,9 @@ const sourceStrings = [
   ...data.languages,
 ];
 
-const missing = sourceStrings.filter((value) => !normalizedPdf.includes(normalize(value)));
+const missing = sourceStrings.filter(
+  (value) => !normalizedPdf.includes(normalize(stripMarkup(value))),
+);
 if (missing.length) {
   throw new Error(`PDF is missing source content:\n- ${missing.join("\n- ")}`);
 }
@@ -122,7 +131,6 @@ const requiredOrder = [
   data.person.title,
   "Experience",
   "Education",
-  "Certifications",
   "Awards and achievements",
   "Skills",
   "Languages",
@@ -144,7 +152,7 @@ for (const role of data.experience) {
   ];
 
   for (const value of orderedRoleContent) {
-    const index = normalizedPdf.indexOf(normalize(value), experienceCursor + 1);
+    const index = normalizedPdf.indexOf(normalize(stripMarkup(value)), experienceCursor + 1);
     if (index === -1) {
       throw new Error(`Experience reading order failed at: ${value}`);
     }

@@ -6,7 +6,10 @@ import YAML from "yaml";
 import { renderResume } from "../src/template.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const contentPath = path.join(root, "content", "resume.yml");
+const contentArg = process.argv[2] || "resume.yml";
+const contentPath = path.isAbsolute(contentArg)
+  ? contentArg
+  : path.join(root, "content", contentArg);
 const cssPath = path.join(root, "src", "resume.css");
 const htmlDirectory = path.join(root, "output", "html");
 const pdfDirectory = path.join(root, "output", "pdf");
@@ -18,7 +21,10 @@ const [yamlSource, css] = await Promise.all([
 
 const data = YAML.parse(yamlSource);
 const html = renderResume(data, css).replace(/[ \t]+$/gm, "");
-const htmlPath = path.join(htmlDirectory, "resume.html");
+const htmlPath = path.join(
+  htmlDirectory,
+  `${path.basename(contentPath, path.extname(contentPath))}.html`,
+);
 const pdfPath = path.join(pdfDirectory, data.meta.outputFilename);
 
 await Promise.all([
@@ -58,7 +64,7 @@ try {
     ["h1", "HelveticaNeue-Light"],
     [".profile p", "HelveticaNeue"],
     [".role-dates", "Menlo-Regular"],
-    [".proof", "Menlo-Bold"],
+    [".proof", "HelveticaNeue-Bold"],
   ];
   for (const [selector, expectedPostScriptName] of fontChecks) {
     const { nodeId } = await client.send("DOM.querySelector", {
@@ -81,9 +87,7 @@ try {
     preferCSSPageSize: true,
     tagged: true,
     outline: true,
-    displayHeaderFooter: true,
-    headerTemplate: "<span></span>",
-    footerTemplate: `<div style="box-sizing:border-box;width:100%;padding:0 19.05mm 5.35mm;color:rgb(126,134,146)!important;-webkit-print-color-adjust:exact;font-family:Menlo,'Liberation Mono',monospace;font-size:7.6pt;"><span style="color:rgb(126,134,146)!important">${data.person.name}&nbsp;&nbsp;&nbsp;${data.person.title}&nbsp;&nbsp;&nbsp;</span><span class="pageNumber" style="color:rgb(126,134,146)!important"></span></div>`,
+    displayHeaderFooter: false,
   });
 } finally {
   await browser.close();
