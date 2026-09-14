@@ -14,10 +14,7 @@ const link = (label, url, className = "") =>
   `<a${className ? ` class="${className}"` : ""} href="${escapeHtml(url)}">${escapeHtml(label)}</a>`;
 
 const renderSkillGroup = ({ label, items }) => `
-  <div class="skill-row">
-    <h3>${escapeHtml(label)}</h3>
-    <p>${items.map(renderInline).join(", ")}</p>
-  </div>`;
+  <p class="skill-row"><strong class="skill-label">${escapeHtml(label)}:</strong> ${items.map(renderInline).join(", ")}</p>`;
 
 const renderExperience = (role, isLast = false) => {
   const roleLabel = `${role.company}, ${role.title} ${role.location}`;
@@ -110,10 +107,7 @@ export function renderResume(data, css) {
     <section aria-labelledby="skills-heading" class="skills last-section">
       <h2 id="skills-heading" class="section-heading">Skills</h2>
       ${data.skills.map(renderSkillGroup).join("\n")}
-      <div class="skill-row">
-        <h3>Languages</h3>
-        <p>${data.languages.map(escapeHtml).join(", ")}</p>
-      </div>
+      <p class="skill-row"><strong class="skill-label">Languages:</strong> ${data.languages.map(escapeHtml).join(", ")}</p>
     </section>
   </main>
 </body>

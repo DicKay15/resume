@@ -267,6 +267,7 @@ strong {
 
 .continued-heading {
   margin-top: 0;
+  break-before: page;
   break-after: avoid;
 }
 
@@ -297,11 +298,14 @@ strong {
 }
 
 .credentials {
-  display: flex;
-  gap: 8mm;
+  display: block;
 }
 
 .credentials p {
+  margin-bottom: 1mm;
+}
+
+.credentials p:last-child {
   margin-bottom: 0;
 }
 
@@ -319,28 +323,21 @@ strong {
 }
 
 .skill-row {
-  display: grid;
-  grid-template-columns: 36.5mm 1fr;
-  gap: 0 3mm;
   margin-bottom: 1.4mm;
+  line-height: 13pt;
 }
 
 .skill-row:last-child {
   margin-bottom: 0;
 }
 
-.skill-row h3 {
+.skill-label {
   color: #7e8692;
   font-size: 8pt;
   font-weight: 700;
   letter-spacing: 0;
   line-height: 13pt;
   text-transform: uppercase;
-}
-
-.skill-row p {
-  margin-bottom: 0;
-  line-height: 13pt;
 }
 
 .last-section {
@@ -365,13 +362,13 @@ strong {
         <span><a href="tel:+918320565071">+91 83205 65071</a></span>
         <span><a href="mailto:dhrumil.kherde@gmail.com">dhrumil.kherde@gmail.com</a></span>
         <span><a href="https://www.linkedin.com/in/dhrumil-dk/">linkedin.com/in/dhrumil-dk</a></span>
-        <span><a href="https://folio5.dhrumilkherde.com/">folio5.dhrumilkherde.com</a></span>
+        <span><a href="https://folio4.dhrumilkherde.com/">folio4.dhrumilkherde.com</a></span>
       </p>
     </header>
 
     <section aria-labelledby="summary-heading" class="profile">
       <h2 id="summary-heading" class="profile-title">Product Designer</h2>
-      <p>I design and ship 0-to-1 AI and SaaS products across healthcare, enterprise, and consumer markets. My work spans UX research, product strategy, information architecture, UI design, design systems, prototyping, developer handoff, and front-end implementation. I turn complex workflows into clear, production-ready experiences.</p>
+      <p>Product Designer with 5+ years taking 0-to-1 healthcare, AI, and enterprise SaaS products from discovery to production. I lead research, interaction design, design systems, prototyping, and usability testing, then work closely with engineers or build the front end in React, TypeScript, and Framer. My focus is making complex, high-stakes workflows clear and ready to ship.</p>
     </section>
 
     <section aria-labelledby="experience-heading" class="experience-heading-block">
@@ -384,12 +381,12 @@ strong {
     </div>
 
     <ul>
-      <li>Led product design across <strong class="proof">seven client products</strong> in healthcare, security, creator economy, and enterprise SaaS, owning UX research, user flows, responsive design, design systems, prototyping, and Figma developer handoff while working directly with founders, product managers, and engineers.</li>
-<li>Led end-to-end design for N1.care, an AI clinical intelligence platform supporting patient management, biomarkers, genetics, diagnostics, and clinical workflows. Shaped <strong class="proof">10 modules</strong> from concept to production with a 23-person team and built an <strong class="proof">80+ component design system</strong> with 64 icons and 86 documented colors.</li>
-<li>Created WCAG-compliant accessible components and a data visualization library for clinician, patient, and administrator personas.</li>
-<li>Built <strong class="proof">45 biomarker chart prototypes</strong> in HTML/CSS/SVG and ApexCharts and wrote <strong class="proof">26 product documentation files</strong> covering 92 platform features and 185 documented items.</li>
-<li>Co-led product design for Riskabilitie, an enterprise risk management SaaS, facilitating stakeholder workshops and translating research into multi-level workflows, analytics dashboards, reporting, and product decisions.</li>
-<li>Owned product design and front-end engineering for Proposal Buddy, an AI proposal management platform with proposal generation, CRM workflows, analytics, approvals, pitch deck creation, and document sharing. Used Claude Code and Codex to accelerate prototyping, design system management, and deployment.</li>
+      <li>Led product design across <strong class="proof">seven client products</strong> in healthcare, security, creator economy, and enterprise SaaS, partnering with founders, product managers, and engineers from discovery through production handoff.</li>
+<li>Led end-to-end design for N1 Care, an AI clinical intelligence platform, as the sole designer on a 23-person team. Shaped <strong class="proof">10 product areas</strong> spanning patient management, clinical records, diagnostics, and clinician-reviewed reports; an internal clinician review reported <strong class="proof">75% less analysis and report-generation time</strong>.</li>
+<li>Built N1 Care&#039;s <strong class="proof">80+ component design system</strong>, defined human-review states and a <strong class="proof">28-point AI report quality checklist</strong>, and prototyped <strong class="proof">45 clinical data visualizations</strong> in HTML/CSS/SVG and ApexCharts for engineering validation.</li>
+<li>Designed the full Expand Health AI longevity platform, turning wearable, lab, lifestyle, and clinical data into a four-score triage workflow and an interactive prototype used for team and investor reviews.</li>
+<li>Co-led Riskabilitie, an enterprise risk-management SaaS, using stakeholder workshops to define permission-aware workflows, assessment and approval flows, analytics dashboards, and executive reporting.</li>
+<li>Owned product design and front-end engineering for Proposal Buddy, shown publicly as GetPosals, shipping lead management, AI-assisted drafting, approvals, analytics, document sharing, and client delivery in React, TypeScript, and Cloudflare.</li>
 <li>Designed and developed <strong class="proof">7+ production Framer websites</strong> for startups and client businesses.</li>
     </ul>
   </article>
@@ -400,10 +397,9 @@ strong {
     </div>
 
     <ul>
-      <li>Led end-to-end product design for the Duggup web and mobile applications as the sole designer, working with the product owner and a cross-functional development team from inception to launch.</li>
-<li>Shipped version 1.0 in <strong class="proof">five months</strong> and reached <strong class="proof">2,000+ users in the first week</strong>.</li>
+      <li>Led end-to-end product design for Duggup&#039;s web and mobile applications as the founding and sole designer, shipping version 1.0 in <strong class="proof">five months</strong> and reaching <strong class="proof">2,000+ users in the first week</strong>.</li>
 <li>Built a cross-platform design system that <strong class="proof">reduced testing and redesign time by 50%</strong> across web and mobile.</li>
-<li>Shipped new features every two weeks and ran A/B tests with developers to improve key user flows.</li>
+<li>Designed contribution, search, challenge, activity-tracking, and event-purchase flows; tracked daily active users, session length, and retention in Amplitude and ran A/B tests with developers.</li>
     </ul>
   </article>
 
@@ -413,35 +409,22 @@ strong {
     </div>
 
     <ul>
-      <li>Led end-to-end UX and UI design for Draftsy, a fantasy sports application for BREN LLC, <strong class="proof">increasing engagement by 20%</strong> through UX iterations and A/B-tested design changes.</li>
-<li>Conducted product research, field studies, and usability testing to refine user experience and product features.</li>
-<li>Led a <strong class="proof">team of three designers</strong> across a food delivery service, a logistics and shipment platform, and an internal enterprise survey tool, owning research, design, and handoff.</li>
+      <li>Led end-to-end product design for Draftsy, a real-time fantasy sports application for BREN LLC. Conducted structured interviews with four active users and the founder, then designed team drafting, timed turns, auto-pick, league, chat, and retention flows that contributed to a <strong class="proof">20% engagement increase</strong>.</li>
+<li>Led a <strong class="proof">team of three designers</strong> across concurrent food delivery, logistics, and enterprise survey products, standardizing design review and developer handoff.</li>
     </ul>
   </article>
 
 
     <h2 id="experience-continued-heading" class="section-heading continued-heading">Experience, continued</h2>
 
-  <article class="role">
+  <article class="role role-last">
     <div class="role-heading">
       <h3>Healthplix Technologies, UX Design Intern <span class="location">Bangalore (Remote)</span>	<span class="role-dates">Apr 2022 to Jun 2022</span></h3>
     </div>
 
     <ul>
-      <li>Expanded the Healthplix design system with <strong class="proof">26 components and variants</strong>, achieving <strong class="proof">100% UI consistency</strong> and reducing design-to-development handoff time by approximately 20%.</li>
+      <li>Expanded the Healthplix design system with <strong class="proof">26 components and variants</strong>, standardizing product UI and reducing design-to-development handoff time by approximately 20%.</li>
 <li>Designed admin panels and on-site marketing campaign interfaces for internal teams, <strong class="proof">reducing campaign launch turnaround time by 33%</strong>.</li>
-    </ul>
-  </article>
-
-  <article class="role role-last">
-    <div class="role-heading">
-      <h3>Freelance, Freelance Product and UX Designer <span class="location">Vadodara (Remote)</span>	<span class="role-dates">Mar 2021 to May 2022</span></h3>
-    </div>
-
-    <ul>
-      <li>Redesigned Baroda Public School&#039;s Learning Management System, <strong class="proof">increasing student interaction by 35%</strong> and <strong class="proof">course completion rates by 20%</strong>.</li>
-<li>Led brand identity design for a client, driving <strong class="proof">350% audience growth within two months</strong>.</li>
-<li>Delivered user flows, usability improvements, logos, marketing posters, carousels, and campaign assets across diverse client projects.</li>
     </ul>
   </article>
 
@@ -479,29 +462,14 @@ strong {
     <section aria-labelledby="skills-heading" class="skills last-section">
       <h2 id="skills-heading" class="section-heading">Skills</h2>
 
-  <div class="skill-row">
-    <h3>Design</h3>
-    <p>Product Design, Product Strategy, UX Research, User Research, User Experience (UX) Design, User Interface (UI) Design, Usability Testing, A/B Testing, Information Architecture, User Flows, Wireframing, Prototyping, Interaction Design, Visual Design, Responsive Design, Design Systems, Accessibility (WCAG), Data Visualization, Design Documentation, Developer Handoff, Stakeholder Management, Cross-functional Collaboration</p>
-  </div>
+  <p class="skill-row"><strong class="skill-label">Design:</strong> Product Design, User-Centered Design, Human-Centered Design, Product Discovery, Product Strategy, UX Research, User Research, User Interviews, Journey Mapping, Service Design, Usability Testing, A/B Testing, Information Architecture, User Flows, Wireframing, Prototyping, Interaction Design, Responsive Design, Design Systems, Accessibility (WCAG), Data Visualization</p>
 
-  <div class="skill-row">
-    <h3>Product contexts</h3>
-    <p>AI Products, SaaS, B2B, Enterprise Software, Healthcare Technology, Mobile App Design, Web App Design, Analytics Dashboards</p>
-  </div>
+  <p class="skill-row"><strong class="skill-label">Collaboration and delivery:</strong> Stakeholder Workshops, Workshop Facilitation, Stakeholder Management, Cross-functional Collaboration, Design Documentation, Developer Handoff, Design-to-code Collaboration</p>
 
-  <div class="skill-row">
-    <h3>Design tools</h3>
-    <p>Figma, Framer, Webflow, Miro, Balsamiq, Notion, Lottie</p>
-  </div>
+  <p class="skill-row"><strong class="skill-label">Product contexts:</strong> AI Products, SaaS, B2B, Enterprise Software, Healthcare Technology, Mobile App Design, Web App Design, Analytics Dashboards</p>
 
-  <div class="skill-row">
-    <h3>AI and build tools</h3>
-    <p>React, TypeScript, HTML/CSS, Tailwind CSS, Cloudflare Workers, Claude Code, Codex, Figma MCP, Figma Make, No-code Development</p>
-  </div>
-      <div class="skill-row">
-        <h3>Languages</h3>
-        <p>English, Hindi, Gujarati, Marathi</p>
-      </div>
+  <p class="skill-row"><strong class="skill-label">Tools and technology:</strong> Figma, Framer, Webflow, Miro, Notion, React, TypeScript, HTML/CSS, Tailwind CSS, ApexCharts, Cloudflare Workers, Claude Code</p>
+      <p class="skill-row"><strong class="skill-label">Languages:</strong> English, Hindi, Gujarati, Marathi</p>
     </section>
   </main>
 </body>

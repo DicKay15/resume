@@ -260,6 +260,7 @@ strong {
 
 .continued-heading {
   margin-top: 0;
+  break-before: page;
   break-after: avoid;
 }
 
@@ -290,11 +291,14 @@ strong {
 }
 
 .credentials {
-  display: flex;
-  gap: 8mm;
+  display: block;
 }
 
 .credentials p {
+  margin-bottom: 1mm;
+}
+
+.credentials p:last-child {
   margin-bottom: 0;
 }
 
@@ -312,28 +316,21 @@ strong {
 }
 
 .skill-row {
-  display: grid;
-  grid-template-columns: 36.5mm 1fr;
-  gap: 0 3mm;
   margin-bottom: 1.4mm;
+  line-height: 13pt;
 }
 
 .skill-row:last-child {
   margin-bottom: 0;
 }
 
-.skill-row h3 {
+.skill-label {
   color: #7e8692;
   font-size: 8pt;
   font-weight: 700;
   letter-spacing: 0;
   line-height: 13pt;
   text-transform: uppercase;
-}
-
-.skill-row p {
-  margin-bottom: 0;
-  line-height: 13pt;
 }
 
 .last-section {
