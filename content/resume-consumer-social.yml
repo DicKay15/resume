@@ -1,0 +1,157 @@
+# Consumer / social / gaming variant.
+# Built for Chess.com Connect (Sept 2026) but written to be reusable for any
+# consumer, social, or games product design role.
+# Same Preflight rules as the main resume: two-line bullets, outcome in the
+# back half, few emphasis spans, pipe-delimited headers, ASCII dates.
+# Build:    npm run build -- resume-consumer-social.yml
+# Validate: npm run validate -- resume-consumer-social.yml
+meta:
+  version: 1
+  outputFilename: Dhrumil-Kherde-Product-Designer-Consumer-Resume.pdf
+  pageTitle: Dhrumil Kherde - Product Designer Resume
+  expectedPages: 2
+  experienceOwnsFirstPage: true
+
+person:
+  name: Dhrumil Kherde
+  title: Product Designer
+  location: India
+  workPreference: Remote
+  phoneDisplay: "+91 83205 65071"
+  phoneUrl: "tel:+918320565071"
+  email: dhrumil.kherde@gmail.com
+  linkedinDisplay: linkedin.com/in/dhrumil-dk
+  linkedinUrl: https://www.linkedin.com/in/dhrumil-dk/
+  portfolioDisplay: folio5.dhrumilkherde.com
+  portfolioUrl: https://folio5.dhrumilkherde.com/
+
+summary: >-
+  Product designer with 5+ years on 0-to-1 products, including two consumer
+  social products I designed from the first screen. Most of my work is the
+  social layer, feeds, profiles, notifications, and the flows that decide
+  whether someone comes back. I own the design system underneath it and
+  prototype in code with Claude and Cursor rather than handing over a static
+  file.
+
+skills:
+  - label: Design
+    items:
+      - Product Design
+      - UX Research
+      - Usability Testing
+      - A/B Testing
+      - Information Architecture
+      - Prototyping
+      - Interaction Design
+      - Motion Design
+      - Design Systems
+      - Accessibility (WCAG)
+  - label: Product contexts
+    items:
+      - Consumer Products
+      - Social Features
+      - Gamification and Engagement Loops
+      - Real-time and Multiplayer Flows
+      - Mobile App Design, iOS and Android
+      - AI Products
+      - SaaS
+  - label: Collaboration and delivery
+    items:
+      - Remote and Distributed Teams
+      - Stakeholder Workshops
+      - Cross-functional Collaboration
+      - Agile
+      - Jira
+      - Design QA
+      - Developer Handoff
+      - Mentorship
+  - label: Tools and technology
+    items:
+      - Figma
+      - Framer
+      - Claude Code
+      - Cursor
+      - Figma Make
+      - React
+      - TypeScript
+      - Tailwind CSS
+      - React Native (Expo)
+      - Cloudflare Workers
+
+experience:
+  - company: CodeBuddy
+    location: Pune
+    title: Product Designer
+    dates: Feb 2025 - May 2026
+    description: Product design across seven client products in creator economy, healthcare, security, and enterprise SaaS.
+    bullets:
+      - Sole designer on [N1 Care](https://folio5.dhrumilkherde.com/work/n1-care/), an AI platform built by a team of 23, across 10 product areas. An internal review measured [[75% less analysis and report time]].
+      - Built its [[80+ component design system]] on shared tokens, then worked with engineering to implement it in code using Claude Code and the Figma MCP.
+      - Owned design and front-end engineering for Proposal Buddy, shipping it live in React, TypeScript, and Cloudflare Workers, plus 7+ production Framer sites.
+
+  - company: Duggup
+    location: Bangalore (Remote)
+    title: Founding Product Designer
+    dates: Feb 2023 - Jan 2025
+    bullets:
+      - Founding and only designer for [Duggup](https://folio5.dhrumilkherde.com/work/duggup/) web and mobile, a social platform for engineers. Shipped version 1.0 in five months and [[2,000+ signed up in the first week]].
+      - Designed the home feed, customisable profiles, and the question ranking that decided what each person saw first.
+      - Built the engagement layer around it, including streaks, time-bound challenges, leaderboards, and an activity ticker for what changed since the last visit.
+      - Built one cross-platform design system rather than two, halving redesign and testing time across web and mobile.
+      - Shipped on a bi-weekly cadence, tracking daily active users, session length, and retention in Amplitude, and A/B testing the weakest steps with engineering.
+
+  - company: Consult Anubhav
+    location: Vadodara
+    title: UX Designer
+    dates: Jun 2022 - Jun 2023
+    bullets:
+      - Led design for Draftsy, a real-time fantasy sports app for BREN LLC. Structured interviews with four active players and the founder showed drafts were stalling on timed turns.
+      - Rebuilt team drafting, timed turns, auto-pick fallback, league creation and joining, in-app chat, and notification settings, tracking where players abandoned the draft rather than only the drafts that finished. Contributed to a [[20% engagement increase]].
+      - Ran a team of three designers across concurrent food delivery, logistics, and enterprise survey products. Part-time from Feb 2023, alongside the founding role at Duggup.
+
+  - company: Healthplix Technologies
+    location: Bangalore (Remote)
+    title: UX Design Intern
+    dates: Apr 2022 - Jun 2022
+    bullets:
+      - Expanded the design system with 26 components and variants, bringing the product to consistent UI and cutting design-to-development handoff time by roughly 20%.
+      - Designed the admin panels and on-site campaign interfaces internal teams ran on, reducing campaign launch turnaround by 33%.
+
+  - company: Freelance
+    location: Vadodara (Remote)
+    title: Product and Brand Designer
+    dates: Mar 2021 - May 2022
+    bullets:
+      - Rebuilt Baroda Public School's learning platform, lifting student interaction [[35%]] and course completion 20%.
+
+builds:
+  - name: Pickle Royale
+    summary: Competitive 2v2 rankings with a custom rating engine. Web, iOS, and Android.
+    linkDisplay: pickleball.dhrumilkherde.com
+    url: https://pickleball.dhrumilkherde.com/
+  - name: Passwords
+    summary: Two-team multiplayer word game with real-time rooms and no login.
+    linkDisplay: passwords.dhrumil-kherde.workers.dev
+    url: https://passwords.dhrumil-kherde.workers.dev/
+  - name: Westeros Lineage
+    summary: Interactive family tree built around one motion-led focus interaction.
+    linkDisplay: lineage.dhrumilkherde.com
+    url: https://lineage.dhrumilkherde.com/
+
+education:
+  - institution: SVIT (Gujarat Technological University)
+    location: Vasad, Gujarat
+    qualification: Bachelor of Engineering, Mechanical Engineering
+    date: May 2022
+
+achievement:
+  title: Top 50 Rising Designers
+  organization: Upraised, Embark
+  date: Oct 2021
+  description: Top 50 of 455,534 students across 20,000+ colleges.
+
+languages:
+  - English
+  - Hindi
+  - Gujarati
+  - Marathi
