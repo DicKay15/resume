@@ -1,0 +1,67 @@
+# Cover letter, Chess.com Product Designer (Connect), Sept 2026.
+# Every paragraph uses a '- >-' block scalar so an unquoted colon cannot turn
+# the string into a YAML map. The builder hard-fails if one ever does.
+# Build: npm run cover-letter -- cover-letter-chesscom.yml
+meta:
+  version: 1
+  outputFilename: Dhrumil-Kherde-Cover-Letter-Chess-com.pdf
+  pageTitle: Dhrumil Kherde - Cover Letter, Chess.com
+
+person:
+  name: Dhrumil Kherde
+  location: India
+  workPreference: Remote
+  phoneDisplay: "+91 83205 65071"
+  phoneUrl: "tel:+918320565071"
+  email: dhrumil.kherde@gmail.com
+  linkedinDisplay: linkedin.com/in/dhrumil-dk
+  linkedinUrl: https://www.linkedin.com/in/dhrumil-dk/
+  portfolioDisplay: folio5.dhrumilkherde.com
+  portfolioUrl: https://folio5.dhrumilkherde.com/
+
+letter:
+  heading: Cover letter
+  role: Product Designer, Connect
+  company: Chess.com
+  date: Sep 2026
+  salutation: Hi Chess.com team,
+  signoff: Thank you for reading,
+  paragraphs:
+    - >-
+      I am applying for the Product Designer role on Connect. I design social and
+      game products, and I ship the front-end code, so I can take something from a
+      problem statement to a working prototype without a handoff sitting in the
+      middle.
+    - >-
+      The closest match to what Connect owns is
+      [Duggup](https://folio5.dhrumilkherde.com/work/duggup/), where I was the
+      founding and only product designer for two years. It was a community platform
+      for engineers across web and mobile, and I designed the home feed, customisable
+      profiles, the question ranking that decided what each person saw first, and the
+      engagement layer around it, including streaks, time-bound challenges,
+      leaderboards and an activity ticker. We shipped version 1.0 in five months and
+      had [[2,000+ sign-ups in the first week]].
+    - >-
+      Before that I spent a year on Draftsy, a real-time fantasy sports app for US
+      college sports. The work was live drafts with timed turns and auto-pick
+      fallbacks, in-app chat, league creation and joining, and notification settings.
+      We tracked where players abandoned the draft rather than only the drafts that
+      finished, because in a social product the interesting behaviour belongs to the
+      person who does not come back.
+    - >-
+      On craft and systems, my most recent work was
+      [N1 Care](https://folio5.dhrumilkherde.com/work/n1-care/), an AI platform where
+      I was the sole designer on a team of 23. I designed 10 product areas and built
+      an [[80+ component design system]] on shared tokens, then worked with
+      engineering to implement it in code using Claude Code and the Figma MCP.
+    - >-
+      Prototyping with Claude and Cursor is already how I work rather than something
+      I would be picking up for this role. Over the last year I designed and built a
+      live 2v2 ranking app with its own rating engine on web, iOS and Android, and a
+      real-time multiplayer word game. Both are linked on my resume and you can open
+      them right now.
+    - >-
+      One last thing worth saying plainly. I have been on Chess.com as DicKay15 since
+      May 2020, somewhere around 800 rapid and playing in bursts. That makes this the
+      first role I have applied to where I already use the product for fun, and it
+      also makes me the exact player your team is trying to bring back.

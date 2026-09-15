@@ -1,0 +1,61 @@
+/* Layered on top of resume.css so the letterhead is byte-identical to the
+   resume. Only the letter body needs new rules. */
+
+body.cover-letter {
+  font-size: 10.3pt;
+  line-height: 1.5;
+}
+
+.letter-meta {
+  margin-top: 4.2mm;
+}
+
+.letter-subject {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 0;
+  color: #1d252f;
+  font-size: 10.2pt;
+  font-weight: 700;
+  letter-spacing: -0.1pt;
+}
+
+.letter-subject .sep {
+  margin: 0 1.6mm;
+  color: #b4bac3;
+  font-weight: 400;
+}
+
+.letter-date {
+  margin-left: auto;
+  color: #7e8692;
+  font-family: Menlo, "DejaVu Sans Mono", monospace;
+  font-size: 8.4pt;
+  font-weight: 400;
+  letter-spacing: -0.2pt;
+}
+
+.letter-body {
+  margin-top: 5mm;
+}
+
+.letter-body p {
+  margin-top: 0;
+  margin-bottom: 3.9mm;
+  max-width: 172mm;
+}
+
+.letter-body .salutation {
+  margin-bottom: 3.8mm;
+}
+
+.letter-body .signoff {
+  margin-top: 5mm;
+  margin-bottom: 0.6mm;
+}
+
+.letter-body .signature {
+  margin-bottom: 0;
+  color: #1d252f;
+  font-weight: 700;
+}

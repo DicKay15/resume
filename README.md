@@ -76,11 +76,19 @@ See [the ATS audit](docs/ats-audit.md) for the complete correction record.
 |---|---|---|
 | `content/resume.yml` | `Dhrumil-Kherde-Product-Designer-Resume.pdf` | Product Designer, UX Designer, Senior Product Designer |
 | `content/resume-design-engineer.yml` | `Dhrumil-Kherde-Design-Engineer-Resume.pdf` | Design Engineer, UX Engineer, Design Systems Engineer |
+| `content/resume-consumer-social.yml` | `Dhrumil-Kherde-Product-Designer-Consumer-Resume.pdf` | Consumer, social, and games product design |
+
+Cover letters reuse the same letterhead and CSS, one YAML file per company:
+
+| Content file | Output |
+|---|---|
+| `content/cover-letter-chesscom.yml` | `Dhrumil-Kherde-Cover-Letter-Chess-com.pdf` |
 
 ```
 npm run check                                    # main resume
 npm run build -- resume-design-engineer.yml      # variant
 npm run validate -- resume-design-engineer.yml
+npm run cover-letter -- cover-letter-chesscom.yml # cover letter
 node scripts/preflight.mjs [content-file.yml]    # the Preflight report's machine checks
 ```
 
